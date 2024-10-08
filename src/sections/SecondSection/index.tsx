@@ -59,7 +59,7 @@ const SecondSection = () => {
             delay: 0.5,
             when: 'beforeChildren',
           }}
-          className="flex h-1 w-16 bg-picoLightGreen absolute top-9 md:top-12 md:w-24"
+          className="flex h-1 w-16 bg-picoLightGreen absolute top-9 md:top-12 md:w-24 z-70"
         />
         <h1 className="text-3xl text-nowrap md:text-5xl font-calya text-white h-full">
           Sobre nós
@@ -151,7 +151,7 @@ const SecondSection = () => {
           }}
           className="flex h-[2px] w-full bg-picoLightGreen top-9 mt-7 md:hidden"
         />
-        <p className="w-full font-bold font-montserrat text-center mt-7 md:mt-14 text-white text-xl md:text-3xl ita">
+        <p className="w-full font-montserrat text-center mt-7 md:mt-14 text-white text-xl md:text-3xl">
           Nossa equipe detém as seguintes certificações:
         </p>
       </motion.div>
