@@ -1,5 +1,4 @@
-import { ArrowIcon, PicoIconNoPulse } from '@/components/PicoIcon';
-import { domAnimation, LazyMotion, motion, useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const SecondSection = () => {

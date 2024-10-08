@@ -1,21 +1,6 @@
 // import { EMenuItems } from '@/lib/utils';
-import { useNavigate } from 'react-router-dom';
-
-import { motion, Transition, Variants, useScroll } from 'framer-motion';
+import { motion, Transition, Variants } from 'framer-motion';
 import { useState } from 'react';
-
-const icon1 = {
-  hidden: {
-    opacity: 0,
-    pathLength: 0,
-    fill: 'rgba(255, 255, 255, 0)',
-  },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-    fill: 'rgba(255, 255, 255, 1)',
-  },
-};
 
 export const PicoIconExtendedPulseHome = () => {
   const animation: Variants = {

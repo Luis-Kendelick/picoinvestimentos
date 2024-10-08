@@ -1,11 +1,3 @@
-{
-  /* <div className="flex w-full mt-12 md:mt-18 gap-8 items-center">
-          <p className="text-lg md:text-xl flex-1 text-white font-light tracking-wide">
-            Nossa equipe detém as seguintes certificações:
-          </p>
-        </div> */
-}
-
 import Autoplay from 'embla-carousel-autoplay';
 import {
   Carousel,
@@ -14,8 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
 
 const certificates = [
   {
