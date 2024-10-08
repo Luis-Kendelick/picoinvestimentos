@@ -3,9 +3,13 @@ import { useRef } from 'react';
 
 const SecondSection = () => {
   const refRight = useRef(null);
+  const refLeft = useRef(null);
   const component = useRef(null);
   const aboutUsRef = useRef(null);
   const rightIsInView = useInView(refRight, { once: true });
+  const leftIsInView = useInView(refLeft, { once: true });
+
+  console.log("🚀 ~ SecondSection ~ rightIsInView:", rightIsInView)
   const componentIsInView = useInView(component, { once: true });
   const aboutUsIsInView = useInView(aboutUsRef, { once: true });
 
@@ -39,13 +43,13 @@ const SecondSection = () => {
         className="flex items-center z-20"
       >
         <motion.div
-          ref={refRight}
+          ref={refLeft}
           initial={{
             x: -100,
             opacity: 0,
           }}
           animate={
-            rightIsInView
+            leftIsInView
               ? {
                   x: 0,
                   opacity: 1,
@@ -56,12 +60,11 @@ const SecondSection = () => {
             type: 'spring',
             stiffness: 50,
             damping: 20,
-            delay: 0.5,
-            when: 'beforeChildren',
+            delay: 1,
           }}
-          className="flex h-1 w-16 bg-picoLightGreen absolute top-9 md:top-12 md:w-24 z-70"
+          className="h-1 w-16 bg-picoLightGreen absolute top-9 md:top-12 md:w-24 opacity-40"
         />
-        <h1 className="text-3xl text-nowrap md:text-5xl font-calya text-white h-full">
+        <h1 className="text-3xl text-nowrap md:text-5xl font-calya text-white h-full z-40">
           Sobre nós
         </h1>
       </motion.div>
