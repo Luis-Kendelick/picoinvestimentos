@@ -163,12 +163,12 @@ const ThirdSection = () => {
         </motion.strong>{' '}
         e{' '}
         <motion.strong
-          ref={tributeRef}
+          ref={successionRef}
           initial={{
             opacity: 0.2,
           }}
           animate={
-            tributeInView
+            successionInView
               ? {
                   opacity: 1,
                 }
