@@ -1,16 +1,6 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-import {
-  CircleUserIcon,
-  HouseIcon,
-  Wallet2Icon,
-  FileArchiveIcon,
-  HandCoinsIcon,
-  LandmarkIcon,
-  MessagesSquareIcon,
-} from 'lucide-react';
-
 export enum EMenuItems {
   HOME = '/',
   PROFILE = '/perfil',
