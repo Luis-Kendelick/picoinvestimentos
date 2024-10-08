@@ -58,7 +58,19 @@ module.exports = {
 			cardcontent: {
 				DEFAULT: 'hsl(var(--cardcontent))',
 				foreground: 'hsl(var(--cardcontent-foreground))'
-			} 
+			},
+			picoLightGreen: {
+				DEFAULT: 'var(--pico-light-green)',
+				// foreground: 'hsl(var(--pico-light-green-foreground))'
+			},
+			picoLightBlue: {
+				DEFAULT: 'var(--pico-light-blue)',
+				// foreground: 'hsl(var(--pico-light-blue-foreground))'
+			},
+			darkbg: {
+				DEFAULT: 'hsl(var(--dark-bg))',
+				// foreground: 'hsl(var(--darkbg-foreground))'
+			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -93,7 +105,10 @@ module.exports = {
 		fontFamily: {
 			cousine: ['Cousine', 'monospace'],
 			azaret: ['Azaret Mono', 'monospace'],
-			rubik: ['Rubik', 'sans-serif']
+			rubik: ['Rubik', 'sans-serif'],
+			oswald: ['Oswald', 'sans-serif'],
+			calya: ['Calya', 'sans-serif'],
+			montserrat: ['Montserrat', 'sans-serif'],
 		}
   	}
   },

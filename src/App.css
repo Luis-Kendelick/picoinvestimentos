@@ -1,19 +1,14 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +17,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +35,23 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+.bg-filter {
+  /* background: hsla(208, 99%, 37%, 1);
+
+  background: radial-gradient(circle, hsla(208, 99%, 37%, 1) 0%, hsla(208, 98%, 34%, 1) 8%, hsla(209, 95%, 32%, 1) 15%, hsla(211, 92%, 29%, 1) 23%, hsla(216, 85%, 24%, 1) 31%, hsla(219, 80%, 22%, 1) 38%, hsla(222, 77%, 20%, 1) 45%, hsla(226, 72%, 18%, 1) 52%, hsla(229, 69%, 17%, 1) 60%, hsla(256, 81%, 10%, 1) 100%);
+
+  background: -moz-radial-gradient(circle, hsla(208, 99%, 37%, 1) 0%, hsla(208, 98%, 34%, 1) 8%, hsla(209, 95%, 32%, 1) 15%, hsla(211, 92%, 29%, 1) 23%, hsla(216, 85%, 24%, 1) 31%, hsla(219, 80%, 22%, 1) 38%, hsla(222, 77%, 20%, 1) 45%, hsla(226, 72%, 18%, 1) 52%, hsla(229, 69%, 17%, 1) 60%, hsla(256, 81%, 10%, 1) 100%);
+
+  background: -webkit-radial-gradient(circle, hsla(208, 99%, 37%, 1) 0%, hsla(208, 98%, 34%, 1) 8%, hsla(209, 95%, 32%, 1) 15%, hsla(211, 92%, 29%, 1) 23%, hsla(216, 85%, 24%, 1) 31%, hsla(219, 80%, 22%, 1) 38%, hsla(222, 77%, 20%, 1) 45%, hsla(226, 72%, 18%, 1) 52%, hsla(229, 69%, 17%, 1) 60%, hsla(256, 81%, 10%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0165BA", endColorstr="#025DAD", GradientType=1); */
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0165BC", endColorstr="#10052E", GradientType=1);  */
+  background: radial-gradient(circle at 50% 0%, #1e0955, #1e0955, #1e0954, #1d0952, #1b084d, #190846, #15073d, #130635, #110531, #10052f, #10052e, #10052e);
+  opacity: 0.90;
+}
+
+.second-section {
+  background: linear-gradient(0deg, #0165ba, #151375, #0f052a);
 }
