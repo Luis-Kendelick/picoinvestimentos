@@ -9,31 +9,31 @@ import {
 
 const certificates = [
   {
-    src: '/src/assets/certificates/cea.jpg',
+    src: '/certificates/cea.jpg',
     alt: 'cea',
   },
   {
-    src: '/src/assets/certificates/cfg.jpg',
+    src: '/certificates/cfg.jpg',
     alt: 'cfg',
   },
   {
-    src: '/src/assets/certificates/cfp.png',
+    src: '/certificates/cfp.png',
     alt: 'cfp',
   },
   {
-    src: '/src/assets/certificates/cga.jpg',
+    src: '/certificates/cga.jpg',
     alt: 'cga',
   },
   {
-    src: '/src/assets/certificates/cge.jpg',
+    src: '/certificates/cge.jpg',
     alt: 'cge',
   },
   {
-    src: '/src/assets/certificates/cpa-10.jpg',
+    src: '/certificates/cpa-10.jpg',
     alt: 'cpa-10',
   },
   {
-    src: '/src/assets/certificates/cpa-20.jpg',
+    src: '/certificates/cpa-20.jpg',
     alt: 'cpa-20',
   },
 ];

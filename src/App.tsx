@@ -13,7 +13,7 @@ const App = () => {
       <Header />
       <div className="w-screen h-screen relative flex justify-center items-center">
         <img
-          src="/src/assets/images/pico-imagem-improved.webp"
+          src="/images/pico-imagem-improved.webp"
           alt="Pico"
           className="h-full w-full object-cover z-0 absolute filter grayscale brightness-150 hue-rotate-270"
         />
