@@ -1,6 +1,5 @@
-import { ArrowIcon, PicoIconNoPulse } from '@/components/PicoIcon';
 import { motion, useInView } from 'framer-motion';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import './styles.modules.css';
 import {
   Carousel,
@@ -10,13 +9,6 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import useEmblaCarousel from 'embla-carousel-react';
-import {
-  EmblaCarouselType,
-  EmblaEventType,
-  EmblaOptionsType,
-} from 'embla-carousel';
-import { usePrevNextButtons } from './ArrowButtons';
-
 const icons = [
   {
     src: '/icons/balance-highlight.png',
@@ -45,23 +37,18 @@ const icons = [
   },
 ];
 
-const TWEEN_FACTOR_BASE = 0.52;
-
-const numberWithinRange = (number: number, min: number, max: number): number =>
-  Math.min(Math.max(number, min), max);
-
 const FourthSection = () => {
   const component = useRef(null);
   const refLeft = useRef(null);
-  const successionRef = useRef(null);
-  const socialRef = useRef(null);
+  // const successionRef = useRef(null);
+  // const socialRef = useRef(null);
 
   const componentIsInView = useInView(component, { once: true });
   const leftIsInView = useInView(refLeft, { once: true });
-  const successionInView = useInView(successionRef, { once: true });
-  const socialInView = useInView(socialRef, { once: true });
+  // const successionInView = useInView(successionRef, { once: true });
+  // const socialInView = useInView(socialRef, { once: true });
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({
+  const [emblaRef, _] = useEmblaCarousel({
     align: 'center',
     loop: true,
   });
@@ -214,7 +201,7 @@ const FourthSection = () => {
         }}
       >
         <CarouselContent>
-          {icons.map((icon, index) => (
+          {icons.map((icon) => (
             <CarouselItem
               key={icon.alt}
               className={`basis-48 mr-5 md:basis-3/12 min-w-0 px-5 md:px-10 flex-shrink-0 flex py-10 border rounded-2xl backdrop-blur-3xl images flex-col items-center gap-6`}

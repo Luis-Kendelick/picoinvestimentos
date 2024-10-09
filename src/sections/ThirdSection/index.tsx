@@ -8,7 +8,6 @@ import {
 } from '@/components/ui/carousel';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowIcon } from '@/components/PicoIcon';
 
 const certificates = [
   {
