@@ -6,6 +6,7 @@ import HomeLogo from './components/HomeLogo';
 import SecondSection from './sections/SecondSection';
 import ThirdSection from './sections/ThirdSection';
 import { PicoIconNoPulse } from './components/PicoIcon';
+import FourthSection from './sections/FourthSection';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         </div>
       </div>
       <ThirdSection />
+      <FourthSection />
     </>
     // <div className="h-auto w-full flex flex-col overflow-x-hidden">
     // </div>

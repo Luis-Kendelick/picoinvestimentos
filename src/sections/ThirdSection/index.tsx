@@ -75,7 +75,7 @@ const ThirdSection = () => {
         }}
         className="w-full md:w-[900px] self-center"
       >
-        <CarouselContent className="touch-pan-y touch-pinch-zoom flex">
+        <CarouselContent className="touch-pan-y touch-pinch-zoom flex max-h-32">
           {certificates.map((certificate, index) => (
             <CarouselItem
               key={index}
@@ -187,12 +187,12 @@ const ThirdSection = () => {
         </motion.strong>.
       </h2>
       <br />
-      <div className='cursor-pointer text-start md:text-center h-fit flex self-end md:self-center items-center border-b-2 border-darkbg w-fit text-lg'>
+      {/* <div className='cursor-pointer text-start md:text-center h-fit flex self-end md:self-center items-center border-b-2 border-darkbg w-fit text-lg'>
         <a>Saiba mais</a>
         <div className='h-4 w-4 animate-pulse duration-1000'>
             <ArrowIcon classNames='ml-1 h-4 w-4 rotate-90' />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
