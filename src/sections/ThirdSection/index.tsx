@@ -11,32 +11,36 @@ import { useRef } from 'react';
 
 const certificates = [
   {
-    src: '/certificates/cea.jpg',
-    alt: 'cea',
-  },
-  {
-    src: '/certificates/cfg.jpg',
-    alt: 'cfg',
-  },
-  {
-    src: '/certificates/cfp.png',
-    alt: 'cfp',
+    src: '/certificates/cge.jpg',
+    alt: 'cge',
   },
   {
     src: '/certificates/cga.jpg',
     alt: 'cga',
   },
   {
-    src: '/certificates/cge.jpg',
-    alt: 'cge',
+    src: '/certificates/cfg.jpg',
+    alt: 'cfg',
   },
   {
-    src: '/certificates/cpa-10.jpg',
-    alt: 'cpa-10',
+    src: '/certificates/cfp-cut.png',
+    alt: 'cfp',
+  },
+  {
+    src: '/certificates/cea.jpg',
+    alt: 'cea',
+  },
+  {
+    src: '/certificates/cnpi-cut.png',
+    alt: 'cnpi',
   },
   {
     src: '/certificates/cpa-20.jpg',
     alt: 'cpa-20',
+  },
+  {
+    src: '/certificates/cpa-10.jpg',
+    alt: 'cpa-10',
   },
 ];
 
@@ -45,7 +49,7 @@ const CertificateImage = ({ src, alt }: { src: string; alt: string }) => {
     <img
       src={src}
       alt={alt}
-      className="object-cover h-full rounded-ss-xl rounded-ee-xl"
+      className="object-contain h-full rounded-ss-xl rounded-ee-xl"
     />
   );
 };
@@ -61,7 +65,11 @@ const ThirdSection = () => {
   const successionInView = useInView(successionRef, { once: true });
   const socialInView = useInView(socialRef, { once: true });
   return (
-    <div className="h-fit w-full z-60 bg-picoLightGreen flex flex-col p-12 px-16 md:p-48 md:py-12 justify-center md:justify-start overflow-x-hidden">
+    <div className="h-fit w-full z-30 bg-picoLightGreen flex flex-col p-12 px-16 md:p-48 md:py-12 justify-center md:justify-start overflow-x-hidden">
+      <h2 className="w-full font-montserrat text-center mb-7 md:mb-10 text-darkbg text-xl md:text-2xl">
+        Nossa equipe de <strong>consultoria financeira</strong> detém as
+        seguintes certificações:
+      </h2>
       <Carousel
         plugins={[
           Autoplay({
@@ -78,7 +86,7 @@ const ThirdSection = () => {
           {certificates.map((certificate, index) => (
             <CarouselItem
               key={index}
-              className="basis-32 mr-3 md:basis-2/12 min-w-0 flex-shrink-0"
+              className="basis-32 mr-3 md:basis-2/12 min-w-0 flex-shrink-0 w-auto"
             >
               <CertificateImage src={certificate.src} alt={certificate.alt} />
             </CarouselItem>
@@ -87,8 +95,12 @@ const ThirdSection = () => {
         <CarouselPrevious className="bg-darkbg fill-white" />
         <CarouselNext className="bg-darkbg fill-white" />
       </Carousel>
-      <h2 className="self-center mt-12 text-xl text-primary text-start md:text-center">
-        Equipe composta por profissionais com mestrado em renomadas Faculdades de Direito do Brasil e Portugal nas áreas de{' '}
+      <h2 className="self-center mt-10 text-xl md:text-2xl text-primary text-start md:text-center">
+        A nossa <strong>equipe de planejamento</strong> patrimonial é composta por profissionais
+        com mestrado em renomadas Faculdades de Direito do Brasil e Portugal.
+        <br />
+        <br />
+        Principais áreas de atuação:{' '}
         <motion.strong
           ref={tributeRef}
           initial={{
@@ -183,7 +195,8 @@ const ThirdSection = () => {
           className="animate-in slide-in-from-right-full text-2xl"
         >
           Sucessões
-        </motion.strong>.
+        </motion.strong>
+        .
       </h2>
       <br />
       {/* <div className='cursor-pointer text-start md:text-center h-fit flex self-end md:self-center items-center border-b-2 border-darkbg w-fit text-lg'>

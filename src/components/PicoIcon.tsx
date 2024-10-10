@@ -140,22 +140,23 @@ export const ArrowIcon = ({ classNames }: { classNames?: string }) => {
     <div
       // onClick={() => navigate(EMenuItems.HOME)}
       className={
-        'w-full flex justify-center items-center cursor-pointer hover:opacity-80 ' +
+        'flex justify-center items-center ' +
         classNames
       }
     >
-      {/* <defs>
-        <linearGradient id="grad1" x1="100%" y1="100%" x2="100%" y2="100%">
-          <stop offset="100%" style={{stopColor: '#ff7e5f', stopOpacity: 1, rotate: '90deg'}} />
-          <stop offset="100%" style={{stopColor: '#feb47b', stopOpacity: 1, rotate: '90deg'}} />
-        </linearGradient>
-      </defs> */}
       <svg
         xmlns={'http://www.w3.org/2000/svg'}
         width="100%"
         height="100%"
         viewBox={'430 200 780 540'}
       >
+        <defs>
+          <linearGradient id="green-gradient" x2="0.35" y2="1">
+            <stop offset="20%" stopColor="var(--color-right)" />
+            <stop offset="50%" stopColor="var(--color-mid)" />
+            <stop offset="95%" stopColor="var(--color-left)" />
+          </linearGradient>
+        </defs>
         <path
           className="cls-1"
           d="m441.75,576.69l111.87,110.9c15.3,14.88 40.17,14.83 55.41,-0.16l169.76,-162.76c15.24,-14.93 37.91,-17.07 53.27,-2.25l180.44,174.69c15.24,14.72 39.84,14.77 55.08,0.05l110.17,-106.03c15.41,-14.83 15.46,-39.02 0.11,-53.95l-348.06,-335.9c-15.3,-14.88 -31.26,-15.15 -46.5,-0.21l-341.68,321.93c-15.19,14.88 -15.13,38.86 0.11,53.68z"

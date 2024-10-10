@@ -5,15 +5,14 @@ import {
   DrawerHeader,
   DrawerTrigger,
 } from '../ui/drawer';
-import { MenuIcon } from 'lucide-react';
+import { MenuIcon, XIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  console.log("🚀 ~ Header ~ menuIsOpen:", menuIsOpen)
   return (
-    <header className="w-full flex flex-row items-center justify-center py-2 md:py-5 z-40 fixed top-0 backdrop-blur-md">
+    <header className="w-full flex flex-row items-center justify-center py-2 md:py-5 z-50 fixed top-0 backdrop-blur-md">
       <nav className="flex grid-flow-row items-center">
         <ul className="flex space-x-0 md:space-x-14 items-center font-normal text-sm w-fit justify-self-center">
           <li>
@@ -21,12 +20,12 @@ const Header = () => {
               href="#home"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
-              SOBRE
+              SOBRE NÓS
             </a>
           </li>
           <li>
             <a
-              href="#about"
+              href="#diferenciais"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
               DIFERENCIAIS
@@ -40,9 +39,7 @@ const Header = () => {
               ABORDAGEM
             </a>
           </li>
-          <li className="w-14">
-            {!menuIsOpen && <PicoIconPulse />}
-          </li>
+          <li className="w-14">{!menuIsOpen && <PicoIconPulse />}</li>
           <li>
             <a
               href="#contact"
@@ -56,7 +53,7 @@ const Header = () => {
               href="#contact"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
-              CONTATO
+              SEJA CLIENTE
             </a>
           </li>
           <li>
@@ -69,12 +66,17 @@ const Header = () => {
           </li>
         </ul>
         <div className="md:hidden w-fit absolute right-5 top-3">
-          <Drawer direction="bottom" onOpenChange={() => setMenuIsOpen(!menuIsOpen)}>
+          <Drawer
+            direction="bottom"
+            onOpenChange={() => setMenuIsOpen(!menuIsOpen)}
+            open={menuIsOpen}
+          >
             <DrawerTrigger>
               <MenuIcon size={40} className="text-white stroke-1" />
             </DrawerTrigger>
             <DrawerContent className="bg-darkbg justify-center flex items-center">
-              <DrawerHeader className='flex items-center flex-col py-10'>
+              <XIcon size={30} className='fill-picoLightGreen stroke-picoLightGreen self-end mr-4 mt-2 border-[1px] rounded-md border-picoLightGreen' onClick={() => setMenuIsOpen(false)} />
+              <DrawerHeader className="flex items-center flex-col py-10">
                 <motion.div
                   initial={{
                     opacity: 0,
@@ -82,7 +84,7 @@ const Header = () => {
                   }}
                   animate={{
                     opacity: 1,
-                    y: 0
+                    y: 0,
                   }}
                   transition={{
                     type: 'spring',
@@ -90,14 +92,18 @@ const Header = () => {
                     damping: 20,
                     delay: 0.2,
                   }}
-                  className="flex items-center justify-center h-20 w-20 mb-20"
+                  className="flex flex-col items-center justify-center h-20 w-20"
                 >
                   <PicoIconPulse />
+                  <h1 className="text-white text-2xl font-calya">Pico</h1>
+                  <h1 className="text-white text-2xl font-calya -mt-1">
+                    Investimentos
+                  </h1>
                 </motion.div>
-                <ul className="flex flex-col space-y-5 items-center justify-center font-montserrat gap-4 py-4">
+                <ul className="mt-10 flex flex-col space-y-5 items-center justify-center font-montserrat gap-3 py-4">
                   <li>
                     <a href="#home" className="text-white hover:text-gray-300">
-                      SOBRE
+                      SOBRE NÓS
                     </a>
                     <motion.div
                       initial={{
@@ -189,7 +195,7 @@ const Header = () => {
                       href="#contact"
                       className="text-white hover:text-gray-300"
                     >
-                      CONTATO
+                      SEJA CLIENTE
                     </a>
                     <motion.div
                       initial={{

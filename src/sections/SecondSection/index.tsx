@@ -106,9 +106,9 @@ const SecondSection = () => {
             }}
             className="font-calya text-start text-3xl md:text-4xl text-white flex-1"
           >
-            Seja guiado por quem entende do mercado financeiro
+            Traçamos estratégias de investimento que se adequem a cada momento da sua vida
           </motion.h2>
-          <motion.p
+          <motion.h2
             initial={{
               opacity: 0,
               y: 50,
@@ -123,13 +123,13 @@ const SecondSection = () => {
               damping: 20,
               delay: 1.6,
             }}
-            className="w-full text-lg md:text-xl text-end md:flex-1 text-white font-light tracking-wide italic"
+            className="w-full text-lg md:text-xl text-end md:flex-1 text-white tracking-wide font-light"
           >
             A <strong className="font-bold text-picoLightGreen">Pico</strong>{' '}
             nasceu da união de profissionais com atuação em grandes instituições
             financeiras e renomados escritórios de advocacia no Brasil e na
             Europa.
-          </motion.p>
+          </motion.h2>
         </div>
         <motion.div
           ref={refRight}
@@ -154,9 +154,6 @@ const SecondSection = () => {
           }}
           className="flex h-[2px] w-full bg-picoLightGreen top-9 mt-7 md:hidden"
         />
-        <p className="w-full font-montserrat text-center mt-7 md:mt-14 text-white text-xl md:text-3xl">
-          Nossa equipe detém as seguintes certificações:
-        </p>
       </motion.div>
     </div>
   );

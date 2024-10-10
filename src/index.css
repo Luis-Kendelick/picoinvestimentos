@@ -120,12 +120,25 @@
     @apply py-7 px-6 md:px-12;
   }
 
+  .green-gradient {
+    svg {
+      fill: url(#green-gradient) #fff;
+    }
+  }
+
+  #green-gradient {
+    --color-left: hsla(161, 84%, 64%, 0);
+    --color-mid: hsla(161, 84%, 64%, 0.5);
+    --color-right: hsl(161 83.5% 64.3%);
+  }
+
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  p {
     @apply font-montserrat align-middle;
   }
 
@@ -165,37 +178,54 @@
   }
 
   html {
-    box-sizing: border-box; /* Facilita o controle de tamanho dos elementos */
-    font-size: 100%; /* Define o tamanho da fonte base */
-    scroll-behavior: smooth; /* Suaviza o scroll ao navegar na página */
-    height: 100%; /* Garante que o html ocupe a altura total */
+    box-sizing: border-box;
+    /* Facilita o controle de tamanho dos elementos */
+    font-size: 100%;
+    /* Define o tamanho da fonte base */
+    scroll-behavior: smooth;
+    /* Suaviza o scroll ao navegar na página */
+    height: 100%;
+    /* Garante que o html ocupe a altura total */
   }
-  
-  *, *::before, *::after {
-    box-sizing: inherit; /* Faz com que todos os elementos herdem o box-sizing do html */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    /* Faz com que todos os elementos herdem o box-sizing do html */
   }
 
   * {
     margin: 0;
     padding: 0;
   }
-  
+
   body {
-    margin: 0; /* Remove margens padrão */
-    font-family: 'Inter', sans-serif; /* Define uma fonte base moderna */
-    line-height: 1.5; /* Torna o texto mais legível */
-    -webkit-font-smoothing: antialiased; /* Melhora a renderização de fontes */
+    margin: 0;
+    /* Remove margens padrão */
+    font-family: 'Inter', sans-serif;
+    /* Define uma fonte base moderna */
+    line-height: 1.5;
+    /* Torna o texto mais legível */
+    -webkit-font-smoothing: antialiased;
+    /* Melhora a renderização de fontes */
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f7f7f7; /* Define uma cor de fundo neutra */
-    color: #333; /* Cor base para o texto */
-    height: auto; /* Garante que o body ocupe a altura total */
-    
+    background-color: #f7f7f7;
+    /* Define uma cor de fundo neutra */
+    color: #333;
+    /* Cor base para o texto */
+    height: auto;
+    /* Garante que o body ocupe a altura total */
+
   }
-  
+
   #root {
-    min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos a altura da tela */
-    display: flex; /* Usado com flexbox para layouts modernos */
-    flex-direction: column; /* Garante que o conteúdo flua de cima para baixo */
+    min-height: 100vh;
+    /* Garante que o conteúdo ocupe pelo menos a altura da tela */
+    display: flex;
+    /* Usado com flexbox para layouts modernos */
+    flex-direction: column;
+    /* Garante que o conteúdo flua de cima para baixo */
     /* @apply overflow-x-hidden; */
     /* @apply w-screen max-w-full; */
   }

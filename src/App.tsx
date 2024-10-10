@@ -22,7 +22,7 @@ const App = () => {
         <HomeLogo />
       </div>
       <SecondSection />
-      <div className="z-50 absolute opacity-25 overflow-hidden w-full md:w-full h-fit top-[700px] md:top-[800px] md:left-[1100px]">
+      <div className="z-30 absolute opacity-25 overflow-hidden w-full md:w-full h-fit top-[700px] md:top-[800px] md:left-[1100px]">
         <div className="w-[200%] md:w-[900px] md:aspect-auto fill-current skew-x-3">
           <PicoIconNoPulse />
         </div>
