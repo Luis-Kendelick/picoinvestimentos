@@ -33,7 +33,6 @@ import { ArrowIcon } from '@/components/PicoIcon';
 const FourthSection = () => {
   const component = useRef(null);
   const refLeft = useRef(null);
-  const successionRef = useRef(null);
   const resultRef = useRef(null);
   const transparencyRef = useRef(null);
   const conformityRef = useRef(null);
