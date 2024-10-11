@@ -138,7 +138,7 @@ const BeAClient = () => {
         <div className="h-full absolute z-10 w-full bg-filter" />
         <HomeLogo className="mt-20 md:mt-10 text-xl w-[250px] md:text-3xl md:w-[360px] h-fit" />
       </div>
-      <div className="w-screen min-h-screen flex flex-col bg-darkbg overflow-x-hidden padding-pages overflow-hidden items-center">
+      <div className="w-screen  flex flex-col bg-darkbg overflow-x-hidden padding-pages overflow-hidden items-center pb-12">
         <h2 className="font-calya text-3xl text-center">Agende uma reunião:</h2>
         <Form {...form}>
           <form
@@ -152,7 +152,9 @@ const BeAClient = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem className="min-w-52 flex-1">
-                    <FormControl className="font-montserrat h-12 text-darkbg font-semibold bg-white">
+                    <FormControl className={clsx("font-montserrat h-12 text-darkbg font-semibold bg-white", {
+                      'border-red-500': form.formState.errors.name,
+                    })}>
                       <Input
                         disabled={isFetchingForm}
                         placeholder="Nome *"
@@ -168,7 +170,9 @@ const BeAClient = () => {
                 name="lastname"
                 render={({ field }) => (
                   <FormItem className="min-w-52 flex-1">
-                    <FormControl className="font-montserrat h-12 text-darkbg font-semibold bg-white">
+                    <FormControl className={clsx("font-montserrat h-12 text-darkbg font-semibold bg-white", {
+                      'border-red-500': form.formState.errors.lastname,
+                    })}>
                       <Input
                         disabled={isFetchingForm}
                         placeholder="Sobrenome *"
@@ -186,7 +190,9 @@ const BeAClient = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem className="min-w-52 flex-1">
-                    <FormControl className="font-montserrat h-12 text-darkbg font-semibold bg-white">
+                    <FormControl className={clsx("font-montserrat h-12 text-darkbg font-semibold bg-white", {
+                      'border-red-500': form.formState.errors.email,
+                    })}>
                       <Input
                         disabled={isFetchingForm}
                         placeholder="E-mail *"
@@ -203,7 +209,9 @@ const BeAClient = () => {
                 name="phone"
                 render={({ field }) => (
                   <FormItem className="min-w-52 flex-1">
-                    <FormControl className="font-montserrat h-12 text-darkbg font-semibold bg-white">
+                    <FormControl className={clsx("font-montserrat h-12 text-darkbg font-semibold bg-white", {
+                      'border-red-500': form.formState.errors.phone,
+                    })}>
                       <InputMask
                         disabled={isFetchingForm}
                         mask="(99) 99999-9999"
@@ -225,14 +233,17 @@ const BeAClient = () => {
                 render={({ field }) => (
                   <FormItem className="min-w-52 flex-1">
                     <Select onValueChange={field.onChange}>
-                      <FormControl className="font-montserrat h-12 text-darkbg font-semibold bg-white">
+                      <FormControl
+                        className={clsx(
+                          'font-montserrat h-12 text-darkbg font-semibold bg-white',
+                          {
+                            'border-red-500': form.formState.errors.investiment,
+                            'opacity-55': isFetchingForm,
+                          },
+                        )}
+                      >
                         <SelectTrigger>
-                          <SelectValue
-                            className={clsx({
-                              'text-gray-400 opacity-40': isFetchingForm,
-                            })}
-                            placeholder="Quanto você deseja investir? *"
-                          />
+                          <SelectValue placeholder="Quanto você deseja investir? *" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent className="font-montserrat font-semibold">
