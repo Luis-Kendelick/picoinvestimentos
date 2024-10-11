@@ -1,4 +1,5 @@
 // import { EMenuItems } from '@/lib/utils';
+import clsx from 'clsx';
 import { motion, Transition, Variants } from 'framer-motion';
 import { useState } from 'react';
 
@@ -17,7 +18,6 @@ export const PicoIconExtendedPulseHome = () => {
     delay: 1.1,
   };
   return (
-    <div className="w-full gap-4 flex justify-center items-center cursor-pointer hover:opacity-80 skew-x-1">
       <motion.svg
         xmlns={'http://www.w3.org/2000/svg'}
         width={'100%'}
@@ -41,11 +41,6 @@ export const PicoIconExtendedPulseHome = () => {
           d="m864.38,985.27l116.11,112.93c15.3,14.88 33.9,14.83 49.14,-0.16l171.91,-164.79c15.24,-14.93 37.91,-17.07 53.27,-2.25l169.93,164.47c15.24,14.72 37.69,16.81 52.99,2.14l110.17,-106.03c15.41,-14.83 17.55,-39.02 2.2,-53.95l-337.55,-325.68c-15.3,-14.88 -40.12,-14.83 -55.36,0.11l-332.87,319.58c-15.19,14.88 -15.13,38.86 0.11,53.68l-0.06,-0.05z"
         />
       </motion.svg>
-      <div className="text-start w-fit flex flex-col text-2xl md:text-7xl">
-        <h1 className="text-white m-0 font-calya font-extralight">PICO</h1>
-        <h1 className="text-white m-0 font-calya">INVESTIMENTOS</h1>
-      </div>
-    </div>
   );
 };
 
@@ -117,12 +112,12 @@ export const PicoIconPulse = () => {
   );
 };
 
-export const PicoIconNoPulse = () => {
+export const PicoIconNoPulse = ({className}: {className?: string}) => {
   return (
-    <div className="w-full flex justify-center items-center skew-x-1">
+    <div className={clsx("flex justify-center items-center", className)}>
       <svg
         xmlns={'http://www.w3.org/2000/svg'}
-        viewBox={'0 0 1600 1300'}
+        viewBox={'0 100 1600 1190'}
         preserveAspectRatio="xMidYMid meet"
         width={'100%'}
         height={'100%'}
@@ -139,22 +134,23 @@ export const ArrowIcon = ({ classNames }: { classNames?: string }) => {
   return (
     <div
       // onClick={() => navigate(EMenuItems.HOME)}
-      className={
-        'flex justify-center items-center ' +
-        classNames
-      }
+      className={clsx('flex justify-center items-center', classNames)}
     >
       <svg
         xmlns={'http://www.w3.org/2000/svg'}
-        width="100%"
-        height="100%"
-        viewBox={'430 200 780 540'}
+        className='w-full h-full'
+        viewBox={'430 190 760 520'}
       >
         <defs>
           <linearGradient id="green-gradient" x2="0.35" y2="1">
             <stop offset="20%" stopColor="var(--color-right)" />
             <stop offset="50%" stopColor="var(--color-mid)" />
             <stop offset="95%" stopColor="var(--color-left)" />
+          </linearGradient>
+          <linearGradient id="blue-gradient" x2="0.35" y2="1">
+            <stop offset="30%" stopColor="var(--color-left)" />
+            <stop offset="80%" stopColor="var(--color-mid)" />
+            <stop offset="98%" stopColor="var(--color-right)" />
           </linearGradient>
         </defs>
         <path

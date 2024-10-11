@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import './styles.modules.css';
 import { ArrowIcon } from '@/components/PicoIcon';
+import { useNavigate } from 'react-router-dom';
 // const icons = [
 //   {
 //     src: '/icons/balance-highlight.png',
@@ -31,6 +32,7 @@ import { ArrowIcon } from '@/components/PicoIcon';
 // ];
 
 const FourthSection = () => {
+  const navigate = useNavigate();
   const component = useRef(null);
   const refLeft = useRef(null);
   const resultRef = useRef(null);
@@ -95,9 +97,7 @@ const FourthSection = () => {
         </h1>
       </motion.div>
       <div className="flex w-full mt-8 md:mt-18 gap-8 items-center flex-wrap md:flex-nowrap z-20">
-        <div
-          className="font-calya text-start text-3xl md:text-4xl flex-1"
-        >
+        <div className="font-calya text-start text-3xl md:text-4xl flex-1">
           <motion.h2
             ref={resultRef}
             initial={{
@@ -182,7 +182,7 @@ const FourthSection = () => {
           atuamos e pensamos de forma diferente.
         </motion.h2>
       </div>
-      <motion.div
+      <motion.a
         initial={{
           x: -200,
         }}
@@ -192,20 +192,21 @@ const FourthSection = () => {
         transition={{
           type: 'linear',
         }}
+        href='/nossos-diferenciais'
         className="z-20 justify-self-start cursor-pointer text-start md:text-center h-fit flex self-end md:self-start items-center border-b-2 border-picoLightGreen w-fit text-lg text-white font-montserrat mt-5"
       >
-        <a>Saiba mais</a>
+        <p>Saiba mais</p>
         <div className="h-4 w-4 animate-pulse duration-1000 left-44">
           <ArrowIcon classNames="ml-1 h-4 w-4 rotate-90 fill-picoLightGreen" />
         </div>
-      </motion.div>
-      <ArrowIcon classNames='rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25' />
-      <ArrowIcon classNames='rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-0 opacity-25' />
-      <ArrowIcon classNames='rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[270px] opacity-25' />
-      <ArrowIcon classNames='rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[540px] opacity-25' />
-      <ArrowIcon classNames='rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[810px] opacity-25' />
-      <ArrowIcon classNames='rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1080px] opacity-25' />
-      <ArrowIcon classNames='rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1350px] opacity-25' />
+      </motion.a>
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-0 opacity-25" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[270px] opacity-25" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[540px] opacity-25" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[810px] opacity-25" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1080px] opacity-25" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1350px] opacity-25" />
       {/* <Carousel
         className="mt-12"
         ref={emblaRef}

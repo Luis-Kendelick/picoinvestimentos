@@ -104,20 +104,12 @@
 }
 
 @layer base {
-  * {
-    /* @apply border-border; */
-  }
-
-  /* body {
-    @apply h-screen w-screen overflow-x-hidden;
-  }
-
-  #root {
-    @apply h-full w-full font-rubik flex flex-col;
-  } */
-
   .card-spacing {
     @apply py-7 px-6 md:px-12;
+  }
+
+  .padding-pages {
+    @apply px-12 md:px-48 pt-8 md:pt-16;
   }
 
   .green-gradient {
@@ -126,10 +118,29 @@
     }
   }
 
+  .blue-gradient {
+    svg {
+      fill: url(#blue-gradient) #fff;
+    }
+  }
+
   #green-gradient {
     --color-left: hsla(161, 84%, 64%, 0);
     --color-mid: hsla(161, 84%, 64%, 0.5);
     --color-right: hsl(161 83.5% 64.3%);
+  }
+
+  #blue-gradient {
+    --color-left: hsl(256, 75%, 9%);
+    --color-mid: hsla(256, 71%, 19%, 0.5);
+    --color-right: hsla(256, 75%, 9%, 0.2);
+  }
+
+  html,
+  body,
+  #root {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   h1,
@@ -149,22 +160,7 @@
     box-sizing: border-box;
   }
 
-  html,
-  body,
-  #root {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
 
-
-  body {
-    @apply font-montserrat;
-    line-height: 1.6;
-    font-size: 16px;
-    /* Cor de texto padrão */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
 
   html {
     font-size: 100%;
@@ -179,20 +175,13 @@
 
   html {
     box-sizing: border-box;
-    /* Facilita o controle de tamanho dos elementos */
-    font-size: 100%;
-    /* Define o tamanho da fonte base */
-    scroll-behavior: smooth;
-    /* Suaviza o scroll ao navegar na página */
     height: 100%;
-    /* Garante que o html ocupe a altura total */
   }
 
   *,
   *::before,
   *::after {
     box-sizing: inherit;
-    /* Faz com que todos os elementos herdem o box-sizing do html */
   }
 
   * {
@@ -201,32 +190,21 @@
   }
 
   body {
+    @apply font-calya;
     margin: 0;
-    /* Remove margens padrão */
-    font-family: 'Inter', sans-serif;
-    /* Define uma fonte base moderna */
     line-height: 1.5;
-    /* Torna o texto mais legível */
     -webkit-font-smoothing: antialiased;
-    /* Melhora a renderização de fontes */
     -moz-osx-font-smoothing: grayscale;
     background-color: #f7f7f7;
-    /* Define uma cor de fundo neutra */
-    color: #333;
-    /* Cor base para o texto */
+    color: #fff;
     height: auto;
-    /* Garante que o body ocupe a altura total */
-
+    line-height: 1.6;
+    font-size: 16px;
   }
 
   #root {
     min-height: 100vh;
-    /* Garante que o conteúdo ocupe pelo menos a altura da tela */
     display: flex;
-    /* Usado com flexbox para layouts modernos */
     flex-direction: column;
-    /* Garante que o conteúdo flua de cima para baixo */
-    /* @apply overflow-x-hidden; */
-    /* @apply w-screen max-w-full; */
   }
 }

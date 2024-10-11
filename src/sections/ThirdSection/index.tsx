@@ -74,6 +74,8 @@ const ThirdSection = () => {
         plugins={[
           Autoplay({
             delay: 3000,
+            stopOnInteraction: true,
+            playOnInit: true,
           }),
         ]}
         opts={{

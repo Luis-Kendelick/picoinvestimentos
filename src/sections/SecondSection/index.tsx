@@ -106,7 +106,7 @@ const SecondSection = () => {
             }}
             className="font-calya text-start text-3xl md:text-4xl text-white flex-1"
           >
-            Traçamos estratégias de investimento que se adequem a cada momento da sua vida
+            Traçamos estratégias de investimento que se adequam a cada momento da sua vida
           </motion.h2>
           <motion.h2
             initial={{

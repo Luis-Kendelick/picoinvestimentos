@@ -17,7 +17,7 @@ const Header = () => {
         <ul className="flex space-x-0 md:space-x-14 items-center font-normal text-sm w-fit justify-self-center">
           <li>
             <a
-              href="#home"
+              href="/"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
               SOBRE NÓS
@@ -25,7 +25,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#diferenciais"
+              href="/nossos-diferenciais"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
               DIFERENCIAIS
@@ -74,8 +74,12 @@ const Header = () => {
             <DrawerTrigger>
               <MenuIcon size={40} className="text-white stroke-1" />
             </DrawerTrigger>
-            <DrawerContent className="bg-darkbg justify-center flex items-center">
-              <XIcon size={30} className='fill-picoLightGreen stroke-picoLightGreen self-end mr-4 mt-2 border-[1px] rounded-md border-picoLightGreen' onClick={() => setMenuIsOpen(false)} />
+            <DrawerContent className="bg-darkbg justify-center flex items-center border-picoLightGreen border-[1px]">
+              <XIcon
+                size={30}
+                className="fill-picoLightGreen stroke-picoLightGreen self-end mr-4 mt-2 border-[1px] rounded-md border-picoLightGreen"
+                onClick={() => setMenuIsOpen(false)}
+              />
               <DrawerHeader className="flex items-center flex-col py-10">
                 <motion.div
                   initial={{
@@ -92,17 +96,25 @@ const Header = () => {
                     damping: 20,
                     delay: 0.2,
                   }}
-                  className="flex flex-col items-center justify-center h-20 w-20"
+                  exit={{
+                    y: -800,
+                    x: 40,
+                  }}
+                  className="flex flex-row items-center justify-center h-20 w-60 gap-5"
                 >
                   <PicoIconPulse />
-                  <h1 className="text-white text-2xl font-calya">Pico</h1>
-                  <h1 className="text-white text-2xl font-calya -mt-1">
-                    Investimentos
-                  </h1>
+                  <div>
+                    <h1 className="text-white text-2xl font-calya text-left">
+                      Pico
+                    </h1>
+                    <h1 className="text-white text-2xl font-calya -mt-1">
+                      Investimentos
+                    </h1>
+                  </div>
                 </motion.div>
                 <ul className="mt-10 flex flex-col space-y-5 items-center justify-center font-montserrat gap-3 py-4">
                   <li>
-                    <a href="#home" className="text-white hover:text-gray-300">
+                    <a href="/" className="text-white hover:text-gray-300">
                       SOBRE NÓS
                     </a>
                     <motion.div
@@ -123,7 +135,7 @@ const Header = () => {
                   </li>
                   <li>
                     <a
-                      href="#diferenciais"
+                      href="/nossos-diferenciais"
                       className="text-white hover:text-gray-300"
                     >
                       DIFERENCIAIS

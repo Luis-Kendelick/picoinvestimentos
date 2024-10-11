@@ -1,8 +1,9 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { PicoIconExtendedPulseHome } from '../PicoIcon';
 import { useState } from 'react';
+import clsx from 'clsx';
 
-const HomeLogo = () => {
+const HomeLogo = ({ className }: { className?: string }) => {
   const [initialAnimationDone, setInitialAnimationDone] = useState(false);
   const { scrollYProgress } = useScroll();
 
@@ -25,9 +26,15 @@ const HomeLogo = () => {
         onComplete: () => setInitialAnimationDone(true),
       }}
       style={{ y: fasterY, opacity: initialAnimationDone ? fadeOpacity : 1 }}
-      className="w-72 md:w-[800px] z-20"
+      className={clsx('w-72 z-20 ', className)}
     >
-      <PicoIconExtendedPulseHome />
+      <div className="w-full gap-4 flex justify-center items-center cursor-pointer hover:opacity-80 skew-x-1">
+        <PicoIconExtendedPulseHome />
+        <div className="text-start w-fit flex flex-col">
+          <h1 className="text-white m-0 font-calya font-extralight">PICO</h1>
+          <h1 className="text-white m-0 font-calya">INVESTIMENTOS</h1>
+        </div>
+      </div>
     </motion.div>
   );
 };
