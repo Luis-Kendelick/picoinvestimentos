@@ -2,7 +2,6 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import './styles.modules.css';
 import { ArrowIcon } from '@/components/PicoIcon';
-import { useNavigate } from 'react-router-dom';
 // const icons = [
 //   {
 //     src: '/icons/balance-highlight.png',

@@ -204,10 +204,10 @@ const NossosDiferenciais = () => {
           </div>
         </div>
         <div className="h-fit md:h-[450px] w-full flex flex-col md:flex-row">
-          <div className="w-full md:w-6/12 h-96 md:h-full flex justify-center items-center flex-col bg-gradient-to-r from-picoLightGreen to-darkbg rounded-xl overflow-hidden opacity-70">
+          <div className="w-full md:w-6/12 h-96 md:h-full flex justify-center items-center flex-col bg-gradient-to-r from-picoLightGreen to-darkbg rounded-t-xl overflow-hidden opacity-70">
             <ArrowIcon classNames=" w-[32rem] crazy-gradient" />
           </div>
-          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-lg xl:text-2xl font-montserrat font-light text-justify gap-5 bg-picoLightGreen text-darkbg rounded-xl px-9 md:px-14 py-9 md:py-0">
+          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-lg xl:text-2xl font-montserrat font-light text-justify gap-5 bg-picoLightGreen text-darkbg rounded-t-xl px-9 md:px-14 py-9 md:py-0">
             <div className="bg-darkbg rounded-full p-4">
               <img
                 src={'/icons/business-strategy-highlight.png'}
