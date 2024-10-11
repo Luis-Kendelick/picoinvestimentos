@@ -42,7 +42,7 @@ const Header = () => {
           <li className="w-14">{!menuIsOpen && <PicoIconPulse />}</li>
           <li>
             <a
-              href="#contact"
+              href="/insights"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
               INSIGHTS
@@ -204,7 +204,7 @@ const Header = () => {
                   </li>
                   <li>
                     <a
-                      href="#contact"
+                      href="/insights"
                       className="text-white hover:text-gray-300"
                     >
                       INSIGHTS
