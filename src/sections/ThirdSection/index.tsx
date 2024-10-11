@@ -67,7 +67,7 @@ const ThirdSection = () => {
   return (
     <div className="h-fit w-full z-30 bg-picoLightGreen flex flex-col p-12 px-16 md:p-48 md:py-12 justify-center md:justify-start overflow-x-hidden">
       <h2 className="w-full font-montserrat text-center mb-7 md:mb-10 text-darkbg text-xl md:text-2xl">
-        Nossa equipe de <strong>consultoria financeira</strong> detém as
+        Nossa <strong>equipe de consultoria financeira</strong> detém as
         seguintes certificações:
       </h2>
       <Carousel
@@ -98,7 +98,7 @@ const ThirdSection = () => {
         <CarouselNext className="bg-darkbg fill-white" />
       </Carousel>
       <h2 className="self-center mt-10 text-xl md:text-2xl text-primary text-start md:text-center">
-        A nossa <strong>equipe de planejamento</strong> patrimonial é composta por profissionais
+        A nossa <strong>equipe de planejamento patrimonial</strong> é composta por profissionais
         com mestrado em renomadas Faculdades de Direito do Brasil e Portugal.
         <br />
         <br />

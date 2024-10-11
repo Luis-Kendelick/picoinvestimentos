@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import './styles.modules.css';
 import { ArrowIcon } from '@/components/PicoIcon';
 
-const FourthSection = () => {
+const FifthSection = () => {
   const component = useRef(null);
   const componentIsInView = useInView(component, { once: true });
   const refLeft = useRef(null);
@@ -273,4 +273,4 @@ const FourthSection = () => {
   );
 };
 
-export default FourthSection;
+export default FifthSection;
