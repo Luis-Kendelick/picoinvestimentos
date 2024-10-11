@@ -4,14 +4,12 @@ import { useAnimate } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@/components/ui/button';
-import InputMask, { Props } from 'react-input-mask';
+import InputMask from 'react-input-mask';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from '@/components/ui/form';
 import {
@@ -37,11 +35,13 @@ const formSchema = z.object({
     .min(1, {
       message: 'O nome é obrigatório.',
     }),
-  lastname: z.string({
-    required_error: 'O sobrenome é obrigatório.',
-  }).min(1, {
-    message: 'O sobrenome é obrigatório.',
-  }),
+  lastname: z
+    .string({
+      required_error: 'O sobrenome é obrigatório.',
+    })
+    .min(1, {
+      message: 'O sobrenome é obrigatório.',
+    }),
   phone: z.string().min(13, {
     message: 'O telefone deve ser no formato (xx) xxxx-xxxx ou xxxxx-xxxx.',
   }),
