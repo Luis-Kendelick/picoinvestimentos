@@ -4,6 +4,7 @@ import { PicoIconNoPulse } from '@/components/PicoIcon';
 import FifthSection from '@/sections/FifthSection';
 import FourthSection from '@/sections/FourthSection';
 import SecondSection from '@/sections/SecondSection';
+import SixthSection from '@/sections/SixthSection';
 import ThirdSection from '@/sections/ThirdSection';
 
 const Home = () => {
@@ -33,6 +34,7 @@ const Home = () => {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
+      <SixthSection />
     </>
   );
 };

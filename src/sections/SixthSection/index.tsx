@@ -5,7 +5,6 @@ import {
   DynamicAnimationOptions,
 } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { ArrowIcon } from '@/components/PicoIcon';
 
 const textLastStateAnimation = {
   opacity: 1,
@@ -19,7 +18,7 @@ const textAnimation: DynamicAnimationOptions = {
   delay: 1,
 };
 
-const FifthSection = () => {
+const SixthSection = () => {
   const component = useRef(null);
   const componentIsInView = useInView(component, { once: true });
   const refLeft = useRef(null);
@@ -51,7 +50,7 @@ const FifthSection = () => {
         },
         {
           ...textAnimation,
-          delay: 1
+          delay: 1,
         },
       );
     proccess2InView &&
@@ -63,7 +62,7 @@ const FifthSection = () => {
         },
         {
           ...textAnimation,
-          delay: 1.2
+          delay: 1.2,
         },
       );
     proccess3InView &&
@@ -75,7 +74,7 @@ const FifthSection = () => {
         },
         {
           ...textAnimation,
-          delay: 1.4
+          delay: 1.4,
         },
       );
     proccess4InView &&
@@ -87,7 +86,7 @@ const FifthSection = () => {
         },
         {
           ...textAnimation,
-          delay: 1.6
+          delay: 1.6,
         },
       );
   });
@@ -95,7 +94,7 @@ const FifthSection = () => {
   return (
     <section
       id="diferenciais"
-      className="relative h-auto w-full z-60 bg-gradient-to-b from-darkbg from-60% to-picoLightGreen bg-gradi flex flex-col p-12 px-16 md:p-48 md:py-12 md:pt-20 justify-center md:justify-start overflow-hidden"
+      className="relative h-auto w-full z-60 bg-darkbg flex flex-col p-12 px-16 md:p-48 md:py-12 md:pt-20 justify-center md:justify-start overflow-hidden"
     >
       <motion.div
         ref={component}
@@ -140,7 +139,7 @@ const FifthSection = () => {
           className="h-1 w-16 bg-picoLightGreen absolute top-9 md:top-12 md:w-24 opacity-40"
         />
         <h1 className="text-3xl text-nowrap md:text-5xl font-calya text-white h-full z-40">
-          Nosso processo
+          Nossa remuneração
         </h1>
       </motion.div>
       <div className="flex w-full mt-8 md:mt-18 gap-8 items-center flex-wrap md:flex-nowrap md:flex-col z-20">
@@ -150,14 +149,12 @@ const FifthSection = () => {
             x: 100,
           }}
           ref={text3}
-          className="w-full text-lg md:text-xl text-justify md:text-center md:flex-1 text-white tracking-wide font-light"
+          className="w-full text-3xl md:text-4xl text-start md:text-start md:flex-1 text-white tracking-wide font-calya"
         >
-          O nosso fluxo de trabalho começa com uma reunião inicial sem
-          compromisso, seguida da coleta dos dados, a partir do que elaboramos
-          um planejamento financeiro, a ser implementado e monitorado conforme
-          as nossas recomendações.
+          A nossa única fonte de receita é uma taxa mensal pré-acordada sobre a
+          carteira do cliente.
         </motion.h2>
-        <div className="flex flex-col md:flex-row gap-7 md:gap-8">
+        {/* <div className="flex flex-col md:flex-row gap-7 md:gap-8">
           <motion.div
             initial={{
               y: 72,
@@ -226,26 +223,26 @@ const FifthSection = () => {
               relevantes em sua vida e/ou mercado financeiro.
             </h2>
           </motion.div>
-        </div>
+        </div> */}
       </div>
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-0 opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[270px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[540px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[810px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1080px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1350px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25" />
+      {/* <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-0 opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[270px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[540px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[810px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1080px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1350px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25" />
 
-      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-0 opacity-50" />
-      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[270px] opacity-50" />
-      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[540px] opacity-50" />
-      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[810px] opacity-50" />
-      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[1080px] opacity-50" />
-      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[1350px] opacity-50" />
-      <div className="flex flex-wrap gap-10 justify-center"></div>
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-0 opacity-50" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[270px] opacity-50" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[540px] opacity-50" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[810px] opacity-50" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[1080px] opacity-50" />
+      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] blue-gradient top-[60%] md:hidden right-[1350px] opacity-50" />
+      <div className="flex flex-wrap gap-10 justify-center"></div> */}
     </section>
   );
 };
 
-export default FifthSection;
+export default SixthSection;

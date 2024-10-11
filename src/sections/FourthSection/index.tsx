@@ -239,13 +239,13 @@ const FourthSection = () => {
           <ArrowIcon classNames="ml-1 h-4 w-4 rotate-90 fill-picoLightGreen" />
         </div>
       </motion.a>
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-0 opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[270px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[540px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[810px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1080px] opacity-25" />
-      <ArrowIcon classNames="rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1350px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-0 opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[270px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[540px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[810px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1080px] opacity-25" />
+      <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-[1350px] opacity-25" />
       {/* <Carousel
         className="mt-12"
         ref={emblaRef}

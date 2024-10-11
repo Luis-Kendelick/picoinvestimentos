@@ -147,19 +147,19 @@
     --color-left: var(--primary);
   }
 
-  .exquisite-css > *:nth-child(4n+1) {
+  .exquisite-css>*:nth-child(4n+1) {
     @apply rotate-45;
   }
-  
-  .exquisite-css > *:nth-child(4n+2) {
+
+  .exquisite-css>*:nth-child(4n+2) {
     @apply rotate-[135deg];
   }
-  
-  .exquisite-css > *:nth-child(4n+3) {
+
+  .exquisite-css>*:nth-child(4n+3) {
     @apply rotate-180;
   }
-  
-  .exquisite-css > *:nth-child(4n+4) {
+
+  .exquisite-css>*:nth-child(4n+4) {
     @apply -rotate-45;
   }
 
@@ -233,5 +233,12 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+}
+
+@layer utilities {
+  .mask-gradient {
+    mask-image: linear-gradient(0deg, #0164ba34, #0164ba7c, #0164ba3b, rgba(0, 0, 0, 0));
+    mask-image: radial-gradient(circle at 30% 120%, #0164ba4f, #0164ba9d, #0164ba77, #0164ba21, #0164ba17, #0164ba0a, #0164ba10, #0164ba00, #0164ba00, #3b3b3b00, #3b3b3b00);
   }
 }
