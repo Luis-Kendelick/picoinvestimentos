@@ -50,7 +50,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#contact"
+              href="/seja-cliente"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
               SEJA CLIENTE
@@ -227,7 +227,7 @@ const Header = () => {
                   </li>
                   <li>
                     <a
-                      href="#contact"
+                      href="/seja-cliente"
                       className="text-white hover:text-gray-300"
                     >
                       SEJA CLIENTE
