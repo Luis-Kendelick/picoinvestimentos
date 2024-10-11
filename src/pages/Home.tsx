@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import HomeLogo from '@/components/HomeLogo';
 import { PicoIconNoPulse } from '@/components/PicoIcon';
+import FifthSection from '@/sections/FifthSection';
 import FourthSection from '@/sections/FourthSection';
 import SecondSection from '@/sections/SecondSection';
 import ThirdSection from '@/sections/ThirdSection';
@@ -31,6 +32,7 @@ const Home = () => {
       </div>
       <ThirdSection />
       <FourthSection />
+      <FifthSection />
     </>
   );
 };

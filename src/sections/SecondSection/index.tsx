@@ -9,17 +9,11 @@ const SecondSection = () => {
   const rightIsInView = useInView(refRight, { once: true });
   const leftIsInView = useInView(refLeft, { once: true });
 
-  console.log("🚀 ~ SecondSection ~ rightIsInView:", rightIsInView)
   const componentIsInView = useInView(component, { once: true });
   const aboutUsIsInView = useInView(aboutUsRef, { once: true });
 
   return (
     <div className="relative bg-darkbg flex flex-col p-16 pb-5 md:p-48 md:pb-10 justify-start md:justify-start overflow-hidden">
-      {/* <div className="z-50 absolute opacity-25 overflow-hidden w-full md:w-fit h-fit -top-28 left-0">
-        <div className="w-[200%] md:w-96 md:aspect-auto fill-current skew-x-3">
-          <PicoIconNoPulse />
-        </div>
-      </div> */}
       <motion.div
         ref={component}
         initial={{
@@ -86,9 +80,6 @@ const SecondSection = () => {
         ref={aboutUsRef}
       >
         <div className="flex w-full mt-8 md:mt-18 gap-8 items-center flex-wrap md:flex-nowrap">
-          {/* <div className="w-[680px] absolute -left-32 -top-28 rotate-45 opacity-5">
-          <PicoIconPulse />
-        </div> */}
           <motion.h2
             initial={{
               opacity: 0,
