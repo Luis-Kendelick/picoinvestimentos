@@ -114,6 +114,29 @@ const Header = () => {
                 </motion.div>
                 <ul className="mt-10 flex flex-col space-y-5 items-center justify-center font-montserrat gap-3 py-4">
                   <li>
+                    <a
+                      href="/area-do-cliente"
+                      className="text-white hover:text-gray-300"
+                    >
+                      ÁREA DO CLIENTE
+                    </a>
+                    <motion.div
+                      initial={{
+                        width: 0,
+                      }}
+                      animate={{
+                        width: '100%',
+                      }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 100,
+                        damping: 20,
+                        delay: 0.2,
+                      }}
+                      className="w-full h-[1px] bg-picoLightGreen"
+                    />
+                  </li>
+                  <li>
                     <a href="/" className="text-white hover:text-gray-300">
                       SOBRE NÓS
                     </a>
