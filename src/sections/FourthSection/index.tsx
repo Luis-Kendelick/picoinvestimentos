@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 //   {
 //     src: '/icons/balance-highlight.png',
 //     alt: 'balance',
-//     text: 'Diferentemente de outros agentes do mercado financeiro, atuamos em conjunto com advogados experientes, que monitoram as frequentes mudanças nas normas regulatórias e tributárias que afetamos planejamentos financeiros.',
+//     text: 'Diferentemente de outros agentes do mercado financeiro, atuamos em conjunto com advogados experientes, que monitoram as frequentes mudanças nas normas regulatórias e tributárias que afetamos planejamentos financeiros.', foi
 //   },
 //   {
 //     src: '/icons/business-strategy-highlight.png',
@@ -17,22 +17,21 @@ import { useNavigate } from 'react-router-dom';
 //   {
 //     src: '/icons/creative-highlight.png',
 //     alt: 'creative',
-//     text: 'Não nos limitamos a monitorar o mercado financeiro, fornecer recomendações de investimento e gerenciar o seu portfólio de ativos.',
+//     text: 'Não nos limitamos a monitorar o mercado financeiro, fornecer recomendações de investimento e gerenciar o seu portfólio de ativos.', foi
 //   },
 //   {
 //     src: '/icons/goals-highlight.png',
 //     alt: 'goals',
-//     text: 'A partir disso, buscamos antecipar eventuais adequações nas eleçãodos melhores ativos, sempre auxiliando os nossos Clientes na avaliação de benefícios, custos e riscos.',
+//     text: 'A partir disso, buscamos antecipar eventuais adequações nas eleçãodos melhores ativos, sempre auxiliando os nossos Clientes na avaliação de benefícios, custos e riscos.', foi
 //   },
 //   {
 //     src: '/icons/validating-ticket-highlight.png',
 //     alt: 'ticket',
-//     text: 'Apoiamos os nossos Clientes no cumprimento de suas obrigações fiscais, inclusive na apuração de ganhos de capital dentro e fora da bolsa, naemissão de guias para pagamento de impostos devidos e na entrega das declarações tributárias.',
+//     text: 'Apoiamos os nossos Clientes no cumprimento de suas obrigações fiscais, inclusive na apuração de ganhos de capital dentro e fora da bolsa, naemissão de guias para pagamento de impostos devidos e na entrega das declarações tributárias.', foi
 //   },
 // ];
 
 const FourthSection = () => {
-  const navigate = useNavigate();
   const component = useRef(null);
   const refLeft = useRef(null);
   const resultRef = useRef(null);
