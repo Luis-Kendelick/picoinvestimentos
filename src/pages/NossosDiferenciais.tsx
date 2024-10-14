@@ -51,7 +51,7 @@ const NossosDiferenciais = () => {
           <motion.h1
             ref={titleBox}
             initial={{ x: -100, opacity: 0 }}
-            className="text-white font-calya z-10 text-xl md:text-5xl"
+            className="text-white font-calya z-10 text-3xl md:text-5xl"
           >
             Nossos diferenciais
           </motion.h1>
@@ -65,13 +65,13 @@ const NossosDiferenciais = () => {
           />
         </div>
       </div>
-      <div className="w-screen min-h-screen flex flex-col items-start bg-darkbg overflow-x-hidden px-0 lg:padding-pages md:pt-0 overflow-hidden">
+      <div className="w-screen min-h-screen flex flex-col items-start bg-darkbg overflow-x-hidden px-0 lg:padding-pages md:pt-0 overflow-hidden pb-12">
         <div className="h-fit md:h-[450px] w-full flex flex-col md:flex-row">
           <div className="w-full md:w-6/12 h-80 md:h-full flex justify-center bg-picoLightGreen rounded-b-xl opacity-70">
             <ArrowIcon classNames="rotate-90 w-[28rem] blue-gradient" />
             <ArrowIcon classNames="rotate-90 w-[28rem] blue-gradient" />
           </div>
-          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-2xl font-montserrat font-light text-justify gap-5 bg-picoLightGreen text-darkbg rounded-b-xl px-9 md:px-14 py-9 md:py-0">
+          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-2xl font-montserrat font-light gap-5 bg-picoLightGreen text-darkbg rounded-b-xl px-9 md:px-14 py-9 md:py-0">
             <div className="bg-darkbg rounded-full p-2">
               <img
                 src={'/icons/creative-highlight.png'}
@@ -84,7 +84,7 @@ const NossosDiferenciais = () => {
           </div>
         </div>
         <div className="h-fit md:h-[450px] w-full flex flex-col-reverse md:flex-row">
-          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-lg xl:text-2xl font-montserrat font-light text-justify gap-5 text-white rounded-xl bg-picoLightBlue px-9 md:px-14 py-9 md:py-0">
+          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-lg xl:text-2xl font-montserrat font-light gap-5 text-white rounded-xl bg-picoLightBlue px-9 md:px-14 py-9 md:py-0">
             <div className="bg-darkbg rounded-full p-4 bg-opacity-30">
               <img
                 src={'/icons/validating-ticket-highlight.png'}
@@ -108,7 +108,7 @@ const NossosDiferenciais = () => {
             <ArrowIcon classNames=" w-[32rem] blue-gradient" />
             <ArrowIcon classNames=" w-[32rem] blue-gradient" />
           </div>
-          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-lg xl:text-2xl font-montserrat font-light text-justify gap-5 bg-picoLightGreen text-darkbg rounded-xl px-9 md:px-14 py-9 md:py-0">
+          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-lg xl:text-2xl font-montserrat font-light gap-5 bg-picoLightGreen text-darkbg rounded-xl px-9 md:px-14 py-9 md:py-0">
             <div className="bg-darkbg rounded-full p-2">
               <img
                 src={'/icons/goals-highlight.png'}
@@ -116,13 +116,13 @@ const NossosDiferenciais = () => {
                 className="h-12 w-12"
               />
             </div>
-            A partir disso, buscamos antecipar eventuais adequações nas
-            eleçãodos melhores ativos, sempre auxiliando os nossos Clientes na
+            A partir disso, buscamos antecipar eventuais adequações na seleção
+            dos melhores ativos, sempre auxiliando os nossos Clientes na
             avaliação de benefícios, custos e riscos.
           </div>
         </div>
         <div className="h-fit md:h-[450px] w-full flex flex-col-reverse md:flex-row">
-          <div className="w-full md:w-6/12 h-fit md:h-full flex flex-col justify-center items-center text-lg xl:text-2xl px-9 md:px-14 py-9 md:py-0 font-montserrat font-light text-justify gap-5 text-white rounded-xl bg-picoLightBlue">
+          <div className="w-full md:w-6/12 h-fit md:h-full flex flex-col justify-center items-center text-lg xl:text-2xl px-9 md:px-14 py-9 md:py-0 font-montserrat font-light gap-5 text-white rounded-xl bg-picoLightBlue">
             <div className="bg-darkbg rounded-full p-4 bg-opacity-30">
               <img
                 src={'/icons/balance-highlight.png'}
@@ -207,17 +207,18 @@ const NossosDiferenciais = () => {
           <div className="w-full md:w-6/12 h-96 md:h-full flex justify-center items-center flex-col bg-gradient-to-r from-picoLightGreen to-darkbg rounded-t-xl overflow-hidden opacity-70">
             <ArrowIcon classNames=" w-[32rem] crazy-gradient" />
           </div>
-          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-lg xl:text-2xl font-montserrat font-light text-justify gap-5 bg-picoLightGreen text-darkbg rounded-t-xl px-9 md:px-14 py-9 md:py-0">
-            <div className="bg-darkbg rounded-full p-4">
+          <div className="w-full md:w-6/12 h-full flex flex-col justify-center items-center text-lg xl:text-2xl font-calya font-light gap-5 bg-darkbg text-darkbg rounded-t-xl px-9 md:px-14 py-9 md:py-0">
+            <div className="rounded-full p-4">
               <img
                 src={'/icons/business-strategy-highlight.png'}
                 alt={'creative'}
                 className="h-12 w-12"
               />
             </div>
-            <h2>
-              Com este pensamento estratégico, a <strong className='font-bold'>Pico</strong> coloca
-              você à frente de qualquer situação que possa ocorrer.
+            <h2 className='font-calya text-center text-2xl text-white'>
+              Com este pensamento estratégico, a{' '}
+              <strong className="font-bold text-picoLightGreen">Pico</strong> coloca você à frente
+              de qualquer situação que possa ocorrer.
             </h2>
           </div>
         </div>

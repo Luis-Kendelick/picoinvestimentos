@@ -46,7 +46,7 @@ const Insights = () => {
           <motion.h1
             ref={titleBox}
             initial={{ x: -100, opacity: 0 }}
-            className="text-white font-calya z-10 text-xl md:text-5xl"
+            className="text-white font-calya z-10 text-3xl md:text-5xl"
           >
             Insights
           </motion.h1>
@@ -60,17 +60,40 @@ const Insights = () => {
           />
         </div>
       </div>
-      <div className="w-screen min-h-screen flex flex-col items-start bg-darkbg overflow-x-hidden padding-pages overflow-hidden">
-        <h2 className="font-calya text-3xl text-center">
-          Explore os nossos relatórios e vídeos! Descubra como podemos
-          contribuir para que você alcance seus objetivos financeiros.
+      <div className="w-screen min-h-screen flex flex-col items-start bg-darkbg overflow-x-hidden padding-pages overflow-hidden px-6">
+        <h2 className="font-calya text-2xl md:text-3xl text-center justify-center">
+          Explore os nossos<br /> relatórios e vídeos! <br /> Descubra como podemos
+          contribuir para que você alcance seus objetivos financeiros
         </h2>
-        <div className="relative border-4 w-full aspect-video mt-10 rounded-2xl border-picoLightGreen flex justify-center items-center">
-          <PlayCircleIcon className="aspect-square h-96 w-96 stroke-picoLightGreen opacity-20 animate-pulse" />
-          <div className='w-full h-full absolute bg-picoLightBlue opacity-30' />
-          <h2 className="isolate z-40 text-4xl md:text-7xl font-calya absolute h-full w-full flex text-center items-center justify-center">
-            Em breve!
-          </h2>
+        <div className='flex gap-10 flex-wrap justify-center max-w-full'>
+          <div className="max-w-full md:max-w-[45%] relative border-4 w-full aspect-video mt-10 rounded-2xl border-picoLightGreen flex justify-center items-center">
+            <PlayCircleIcon className="aspect-square h-96 w-96 stroke-picoLightGreen opacity-20 animate-pulse" />
+            <div className="w-full h-full absolute bg-picoLightBlue opacity-30" />
+            <h2 className="isolate z-40 text-4xl md:text-7xl font-calya absolute h-full w-full flex text-center items-center justify-center">
+              Em breve!
+            </h2>
+          </div>
+          <div className="max-w-full md:max-w-[45%] relative border-4 w-full aspect-video mt-10 rounded-2xl border-picoLightGreen flex justify-center items-center">
+            <PlayCircleIcon className="aspect-square h-96 w-96 stroke-picoLightGreen opacity-20 animate-pulse" />
+            <div className="w-full h-full absolute bg-picoLightBlue opacity-30" />
+            <h2 className="isolate z-40 text-4xl md:text-7xl font-calya absolute h-full w-full flex text-center items-center justify-center">
+              Em breve!
+            </h2>
+          </div>
+          <div className="max-w-full md:max-w-[45%] relative border-4 w-full aspect-video mt-10 rounded-2xl border-picoLightGreen flex justify-center items-center">
+            <PlayCircleIcon className="aspect-square h-96 w-96 stroke-picoLightGreen opacity-20 animate-pulse" />
+            <div className="w-full h-full absolute bg-picoLightBlue opacity-30" />
+            <h2 className="isolate z-40 text-4xl md:text-7xl font-calya absolute h-full w-full flex text-center items-center justify-center">
+              Em breve!
+            </h2>
+          </div>
+          <div className="max-w-full md:max-w-[45%] relative border-4 w-full aspect-video mt-10 rounded-2xl border-picoLightGreen flex justify-center items-center">
+            <PlayCircleIcon className="aspect-square h-96 w-96 stroke-picoLightGreen opacity-20 animate-pulse" />
+            <div className="w-full h-full absolute bg-picoLightBlue opacity-30" />
+            <h2 className="isolate z-40 text-4xl md:text-7xl font-calya absolute h-full w-full flex text-center items-center justify-center">
+              Em breve!
+            </h2>
+          </div>
         </div>
       </div>
     </>

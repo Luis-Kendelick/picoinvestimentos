@@ -133,9 +133,9 @@ const FourthSection = () => {
               damping: 20,
               delay: 1,
             }}
-            className="text-white font-calya text-start text-3xl md:text-4xl flex-1"
+            className="text-white font-calya text-start text-2xl md:text-4xl flex-1"
           >
-            Resultado,
+            Resultado
           </motion.h2>
           {/* <br /> */}
           <motion.h2
@@ -154,9 +154,9 @@ const FourthSection = () => {
               damping: 20,
               delay: 1.2,
             }}
-            className="text-white font-calya text-start text-3xl md:text-4xl flex-1"
+            className="text-white font-calya text-start text-2xl md:text-4xl flex-1"
           >
-            Transparência,
+            Transparência
           </motion.h2>
           {/* <br /> */}
           <motion.h2
@@ -175,9 +175,9 @@ const FourthSection = () => {
               damping: 20,
               delay: 1.5,
             }}
-            className="text-white font-calya text-start text-3xl md:text-4xl flex-1"
+            className="text-white font-calya text-start text-2xl md:text-4xl flex-1"
           >
-            Conformidade.
+            Conformidade
           </motion.h2>
         </div>
         <div className="flex flex-col p-0 md:pl-56">

@@ -77,7 +77,7 @@ const Header = () => {
             <DrawerContent className="bg-darkbg justify-center flex items-center border-picoLightGreen border-[1px]">
               <XIcon
                 size={30}
-                className="fill-picoLightGreen stroke-picoLightGreen self-end mr-4 mt-2 border-[1px] rounded-md border-picoLightGreen"
+                className="fill-picoLightGreen stroke-picoLightGreen self-end mr-4 mt-2 border-[1px] rounded-md border-picoLightGreen absolute top-12"
                 onClick={() => setMenuIsOpen(false)}
               />
               <DrawerHeader className="flex items-center flex-col py-10">
@@ -101,6 +101,7 @@ const Header = () => {
                     x: 40,
                   }}
                   className="flex flex-row items-center justify-center h-20 w-60 gap-5"
+                  onClick={() => window.open('/', '_self')}
                 >
                   <PicoIconPulse />
                   <div>
@@ -115,7 +116,8 @@ const Header = () => {
                 <ul className="mt-10 flex flex-col space-y-5 items-center justify-center font-montserrat gap-3 py-4">
                   <li>
                     <a
-                      href="/area-do-cliente"
+                      href="https://area-do-cliente.picoinvestimentos.com"
+                      target='_blank'
                       className="text-white hover:text-gray-300"
                     >
                       ÁREA DO CLIENTE
