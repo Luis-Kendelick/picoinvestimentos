@@ -65,7 +65,7 @@ const ThirdSection = () => {
   const successionInView = useInView(successionRef, { once: true });
   const socialInView = useInView(socialRef, { once: true });
   return (
-    <div className="h-fit w-full z-30 bg-picoLightGreen flex flex-col p-12 px-16 md:p-48 md:py-12 justify-center md:justify-start overflow-x-hidden">
+    <div className="h-fit w-full z-30 bg-picoLightGreen flex flex-col p-12 px-8 md:p-48 md:py-12 justify-center md:justify-start overflow-x-hidden">
       <h2 className="w-full font-montserrat text-center mb-7 md:mb-10 text-darkbg text-xl md:text-2xl">
         Nossa <strong>equipe de consultoria financeira</strong> detém as
         seguintes certificações:

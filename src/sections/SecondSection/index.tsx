@@ -13,7 +13,7 @@ const SecondSection = () => {
   const aboutUsIsInView = useInView(aboutUsRef, { once: true });
 
   return (
-    <div className="relative bg-darkbg flex flex-col p-16 pb-5 md:p-48 md:pb-10 justify-start md:justify-start overflow-hidden">
+    <div className="relative bg-darkbg flex flex-col pt-16 px-8 pb-5 md:p-48 md:pb-10 justify-start md:justify-start overflow-hidden">
       <motion.div
         ref={component}
         initial={{
@@ -95,9 +95,10 @@ const SecondSection = () => {
               damping: 20,
               delay: 1.4,
             }}
-            className="font-calya text-start text-3xl md:text-4xl text-white flex-1"
+            className="font-calya text-start text-2xl md:text-3xl text-white flex-1"
           >
-            Traçamos estratégias de investimento que se adequam a cada momento da sua vida
+            Traçamos estratégias de investimento que se adequam a cada momento
+            da sua vida
           </motion.h2>
           <motion.h2
             initial={{
@@ -114,7 +115,7 @@ const SecondSection = () => {
               damping: 20,
               delay: 1.6,
             }}
-            className="w-full text-lg md:text-xl text-end md:flex-1 text-white tracking-wide font-light"
+            className="w-full text-lg md:text-xl md:flex-1 text-white tracking-wide font-light text-end"
           >
             A <strong className="font-bold text-picoLightGreen">Pico</strong>{' '}
             nasceu da união de profissionais com atuação em grandes instituições

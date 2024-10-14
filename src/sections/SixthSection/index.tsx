@@ -94,7 +94,7 @@ const SixthSection = () => {
   return (
     <section
       id="diferenciais"
-      className="relative h-auto w-full z-60 bg-darkbg flex flex-col p-12 px-16 md:p-48 md:py-12 md:pt-20 justify-center md:justify-start overflow-hidden"
+      className="relative h-auto w-full z-60 bg-darkbg flex flex-col p-12 px-8 md:p-48 md:py-12 md:pt-20 justify-center md:justify-start overflow-hidden"
     >
       <motion.div
         ref={component}
