@@ -1,4 +1,3 @@
-import { ArrowIcon } from '@/components/PicoIcon';
 import {
   motion,
   useAnimate,
