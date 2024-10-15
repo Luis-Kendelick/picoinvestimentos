@@ -9,8 +9,8 @@ const Footer = ({ children }: { children: ReactNode }) => {
   return (
     <>
       {children}
-      <footer className="bg-gradient-to-b from-darkbg to-picoLightBlue w-full flex flex-col md:flex-row justify-around md:justify-between h-96 px-52 items-center">
-        <div className="h-96 w-full md:w-[54rem] flex absolute left-0">
+      <footer className="bg-gradient-to-b from-darkbg to-picoLightBlue w-full flex flex-col md:flex-row justify-around md:justify-between h-72 px-52 items-center">
+        <div className="h-72 w-full md:w-[54rem] flex absolute left-0">
           <img
             src={'/images/footer-image-compressed.webp'}
             alt="Investimentos"

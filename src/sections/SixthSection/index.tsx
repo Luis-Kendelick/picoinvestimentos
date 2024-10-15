@@ -183,7 +183,7 @@ const SixthSection = () => {
             x: 100,
           }}
           ref={text3}
-          className="w-full text-2xl md:text-4xl text-start md:text-start md:flex-1 text-white tracking-wide font-calya"
+          className="w-full text-2xl md:text-3xl text-start md:text-start md:flex-1 text-white tracking-wide font-calya"
         >
           Na <strong className="text-picoLightGreen">Pico</strong>, atuamos de
           forma independente e transparente. <br />
