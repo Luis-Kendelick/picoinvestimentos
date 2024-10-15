@@ -70,7 +70,7 @@ const NossosDiferenciais = () => {
             <ArrowIcon classNames="rotate-90 w-[28rem] blue-gradient" />
             <ArrowIcon classNames="rotate-90 w-[28rem] blue-gradient" />
           </div> */}
-          <div className="w-full md:w-6/12 text-xl font-montserrat font-light bg-picoLightGreen/70 text-darkbg rounded-b-xl px-14 py-12 flex flex-row">
+          <div className="w-full md:w-6/12 text-xl font-montserrat font-light bg-picoLightGreen/70 text-darkbg rounded-b-xl px-4 md:px-14 py-12 flex flex-row">
             <div className="bg-darkbg rounded-full p-3 w-16 h-16 aspect-square flex justify-center items-center mr-4">
               <img
                 src={'/icons/creative-highlight.png'}
@@ -84,7 +84,7 @@ const NossosDiferenciais = () => {
               de ativos.
             </p>
           </div>
-          <div className="w-full md:w-6/12 text-xl font-montserrat font-light bg-picoLightGreen text-darkbg rounded-b-xl px-14 py-12 flex flex-row">
+          <div className="w-full md:w-6/12 text-xl font-montserrat font-light bg-picoLightGreen text-darkbg rounded-xl md:rounded-b-xl md:rounded-t-none px-4 md:px-14 py-12 flex flex-row">
             <div className="bg-darkbg rounded-full p-3 w-16 h-16 aspect-square flex justify-center items-center mr-4">
               <img
                 src={'/icons/validating-ticket-highlight.png'}
@@ -121,7 +121,7 @@ const NossosDiferenciais = () => {
             <ArrowIcon classNames=" w-[32rem] blue-gradient" />
             <ArrowIcon classNames=" w-[32rem] blue-gradient" />
           </div> */}
-          <div className="w-full md:w-6/12 text-xl font-montserrat font-light bg-picoLightGreen text-darkbg rounded-xl px-14 py-12 flex flex-row">
+          <div className="w-full md:w-6/12 text-xl font-montserrat font-light bg-picoLightGreen text-darkbg rounded-xl px-4 md:px-14 py-12 flex flex-row">
             <div className="bg-darkbg rounded-full p-3 w-16 h-16 aspect-square flex justify-center items-center mr-4">
               <img
                 src={'/icons/goals-highlight.png'}
@@ -133,7 +133,7 @@ const NossosDiferenciais = () => {
             dos melhores ativos, sempre auxiliando os nossos Clientes na
             avaliação de benefícios, custos e riscos.
           </div>
-          <div className="w-full md:w-6/12 text-xl font-montserrat font-light bg-picoLightGreen/70 text-darkbg rounded-xl px-14 py-12 flex flex-row">
+          <div className="w-full md:w-6/12 text-xl font-montserrat font-light bg-picoLightGreen/70 text-darkbg rounded-xl px-4 md:px-14 py-12 flex flex-row">
             <div className="bg-darkbg rounded-full p-3 w-16 h-16 aspect-square flex justify-center items-center mr-4">
               <img
                 src={'/icons/balance-highlight.png'}
