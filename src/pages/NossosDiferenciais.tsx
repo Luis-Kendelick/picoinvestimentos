@@ -228,7 +228,7 @@ const NossosDiferenciais = () => {
                 className="h-12 w-12"
               />
             </div>
-            <h2 className="font-calya text-center text-2xl text-white">
+            <h2 className="font-calya text-center text-3xl md:text-4xl text-white">
               Com este pensamento estratégico, a{' '}
               <strong className="font-bold text-picoLightGreen">Pico</strong>{' '}
               coloca você à frente de qualquer situação que possa ocorrer.
