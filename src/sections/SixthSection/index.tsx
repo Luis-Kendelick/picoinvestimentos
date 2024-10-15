@@ -1,3 +1,4 @@
+import { ArrowIcon } from '@/components/PicoIcon';
 import {
   motion,
   useAnimate,
@@ -31,11 +32,45 @@ const SixthSection = () => {
   const proccess3InView = useInView(proccess3, { once: true });
   const [proccess4, proccess4Animate] = useAnimate();
   const proccess4InView = useInView(proccess4, { once: true });
+  const [text1, text1Animate] = useAnimate();
+  const text1InView = useInView(text1, { once: true });
+  const [text2, text2Animate] = useAnimate();
+  const text2InView = useInView(text2, { once: true });
 
   const [text3, text3Animate] = useAnimate();
   const text3InView = useInView(text3, { once: true });
 
   useEffect(() => {
+    text2InView &&
+      text2Animate(
+        text2.current,
+        {
+          x: 0,
+          opacity: 1,
+        },
+        {
+          delay: 1,
+          type: 'spring',
+          stiffness: 50,
+          damping: 20,
+        },
+      );
+    text1InView &&
+      text1Animate(
+        text1.current,
+        {
+          x: 0,
+          opacity: 1,
+        },
+        {
+          delay: 1,
+          type: 'spring',
+          stiffness: 50,
+          damping: 20,
+        },
+      );
+    
+
     text3InView &&
       text3Animate(text3.current, textLastStateAnimation, {
         ...textAnimation,
@@ -139,7 +174,7 @@ const SixthSection = () => {
           className="h-1 w-16 bg-picoLightGreen absolute top-9 md:top-12 md:w-24 opacity-40"
         />
         <h1 className="text-3xl text-nowrap md:text-5xl font-calya text-white h-full z-40">
-          Nossa remuneração
+          Nossa abordagem
         </h1>
       </motion.div>
       <div className="flex w-full mt-8 md:mt-18 gap-8 items-center flex-wrap md:flex-nowrap md:flex-col z-20">
@@ -149,81 +184,54 @@ const SixthSection = () => {
             x: 100,
           }}
           ref={text3}
-          className="w-full text-3xl md:text-4xl text-start md:text-start md:flex-1 text-white tracking-wide font-calya"
+          className="w-full text-2xl md:text-4xl text-start md:text-start md:flex-1 text-white tracking-wide font-calya"
         >
-          A nossa única fonte de receita é uma taxa mensal pré-acordada sobre a
-          carteira do cliente.
+          Na <strong className="text-picoLightGreen">Pico</strong>, atuamos de
+          forma independente e transparente. <br />
+          Não nos beneficiamos de qualquer tipo de remuneração proveniente de
+          bancos, corretoras, gestoras, entre outros.
         </motion.h2>
-        {/* <div className="flex flex-col md:flex-row gap-7 md:gap-8">
-          <motion.div
-            initial={{
-              y: 72,
-              opacity: 0,
-            }}
-            ref={proccess1}
-            className="relative flex justify-start items-center px-9 py-4 h-fit w-full bg-purple-900 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-15 border border-gray-50 shadow-2xl"
-          >
-            <h2>
-              <strong>Apresentação</strong> do trabalho.
-            </h2>
-            <div className="absolute h-full left-[98%] top-[75%] rotate-180 md:rotate-90 md:-top-7 md:left-[100%]">
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{
-              y: 72,
-              opacity: 0,
-            }}
-            ref={proccess2}
-            className="relative flex justify-center items-center px-9 py-4 h-fit w-full bg-purple-900 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-15 border border-gray-50 shadow-2xl"
-          >
-            <h2>
-              <strong>Coletamos</strong> informações necessáriasparaa
-              elaboraçãodoseu planejamentofinanceiro.
-            </h2>
-            <div className="absolute right-[98%] top-[90%] rotate-180 md:rotate-90 md:top-[5.3rem] md:left-[105%]">
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{
-              y: 72,
-              opacity: 0,
-            }}
-            ref={proccess3}
-            className="relative flex justify-center items-center px-9 py-4 h-fit w-full bg-purple-900 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-15 border border-gray-50 shadow-2xl"
-          >
-            <h2>
-              <strong>Após análise</strong>, apresentaremos um relatório
-              personalizado, com análise de risco, taxa e retorno e explicaremos
-              a nossa estratégia.
-            </h2>
-            <div className="absolute left-[98%] top-[90%] rotate-180 md:rotate-90 md:-top-9 md:left-[95%]">
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{
-              y: 72,
-              opacity: 0,
-            }}
-            ref={proccess4}
-            className="relative flex justify-center items-center px-9 py-4 h-fit w-full bg-purple-900 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-15 border border-gray-50 shadow-2xl"
-          >
-            <h2>
-              <strong>Auxiliamos</strong> o Cliente na implementação do plano
-              e,periodicamente,realizaremos readequações de acordo com mudanças
-              relevantes em sua vida e/ou mercado financeiro.
-            </h2>
-          </motion.div>
-        </div> */}
+        <motion.h2
+          ref={text2}
+          initial={{
+            opacity: 0,
+            x: 100,
+          }}
+          className="w-full text-lg md:text-xl text-end md:flex-1 text-white tracking-wide font-light"
+        >
+          Cada cliente escolhe a corretora com a qual quer trabalhar.
+        </motion.h2>
+        <motion.h2
+          ref={text1}
+          initial={{
+            opacity: 0,
+            x: 100,
+          }}
+          className="w-full text-lg md:text-xl text-end md:flex-1 text-white tracking-wide font-light max-w-full"
+        >
+          {/* Na <strong className="text-picoLightGreen font-bold">Pico</strong>{' '} */}
+          A nossa única fonte de receita é uma taxa mensal pré-acordada sobre a
+          carteira do Cliente, {window.innerWidth > 765 && <br />} o que nos permite atuar sem vieses, escolhendo os
+          melhores investimentos.
+        </motion.h2>
+        {/* <motion.a
+          initial={{
+            x: -200,
+          }}
+          animate={{
+            x: 0,
+          }}
+          transition={{
+            type: 'linear',
+          }}
+          href="/nossos-diferenciais"
+          className="z-20 justify-self-start cursor-pointer text-start md:text-center h-fit flex self-end md:self-start items-center border-b-2 border-picoLightGreen w-fit text-lg text-white font-montserrat mt-5"
+        >
+          <p>Saiba mais</p>
+          <div className="h-4 w-4 animate-pulse duration-1000 left-44">
+            <ArrowIcon classNames="ml-1 h-4 w-4 rotate-90 fill-picoLightGreen" />
+          </div>
+        </motion.a> */}
       </div>
       {/* <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25" />
       <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-0 opacity-25" />

@@ -66,7 +66,7 @@ const ThirdSection = () => {
   const socialInView = useInView(socialRef, { once: true });
   return (
     <div className="h-fit w-full z-30 bg-picoLightGreen flex flex-col p-12 pb-6 px-8 md:p-48 md:py-12 justify-center md:justify-start overflow-x-hidden opacity-70">
-      <h2 className="w-full font-montserrat text-left md:text-center mb-7 md:mb-10 text-darkbg text-xl md:text-2xl">
+      <h2 className="w-full font-montserrat text-left md:text-center mb-7 md:mb-10 text-darkbg text-lg md:text-xl">
         Nossa <strong>equipe de consultoria financeira</strong> detém as
         seguintes certificações:
       </h2>
@@ -97,14 +97,16 @@ const ThirdSection = () => {
         <CarouselPrevious className="bg-darkbg fill-white" />
         <CarouselNext className="bg-darkbg fill-white" />
       </Carousel>
-      <h2 className="self-center mt-10 text-lg md:text-2xl text-primary text-start md:text-center">
-        A nossa <strong>equipe de planejamento patrimonial</strong> é composta por profissionais
-        com mestrado em renomadas Faculdades de Direito do Brasil e Portugal.
+      <h2 className="self-center mt-10 text-lg md:text-xl text-primary text-start md:text-center">
+        A nossa <strong>equipe de planejamento patrimonial</strong> é composta
+        por profissionais com mestrado em renomadas Faculdades de Direito do
+        Brasil e Portugal.
         <br />
         <br />
       </h2>
-      <h2 className="self-center mt-1 text-lg md:text-2xl text-primary text-end md:text-center">
-      Principais áreas de atuação:{' '}
+      <h2 className="mt-1 text-lg md:text-xl text-primary text-end md:text-center">
+        Principais áreas de atuação:{' '}
+        {window.innerWidth < 765 && <br />}
         <motion.strong
           ref={tributeRef}
           initial={{
@@ -124,7 +126,7 @@ const ThirdSection = () => {
             delay: 0.5,
             when: 'beforeChildren',
           }}
-          className="animate-in slide-in-from-right-full text-lg"
+          className="animate-in slide-in-from-right-full text-lg md:text-xl"
         >
           Tributário
         </motion.strong>
@@ -148,12 +150,11 @@ const ThirdSection = () => {
             delay: 0.9,
             when: 'beforeChildren',
           }}
-          className="animate-in slide-in-from-right-full text-lg"
+          className="animate-in slide-in-from-right-full text-lg md:text-xl"
         >
           Societário
         </motion.strong>
-        ,{' '}
-        <br />
+        , {window.innerWidth < 765 && <br />}
         <motion.strong
           ref={familyRef}
           initial={{
@@ -173,7 +174,7 @@ const ThirdSection = () => {
             delay: 1.3,
             when: 'beforeChildren',
           }}
-          className="animate-in slide-in-from-right-full text-lg"
+          className="animate-in slide-in-from-right-full text-lg md:text-xl"
         >
           Família
         </motion.strong>{' '}
@@ -197,7 +198,7 @@ const ThirdSection = () => {
             delay: 1.6,
             when: 'beforeChildren',
           }}
-          className="animate-in slide-in-from-right-full text-lg"
+          className="animate-in slide-in-from-right-full text-lg md:text-xl"
         >
           Sucessões
         </motion.strong>

@@ -78,7 +78,7 @@ const Header = () => {
             <DrawerContent className="bg-darkbg justify-center flex items-center border-picoLightGreen border-[1px]">
               <XIcon
                 size={30}
-                className="fill-picoLightGreen stroke-picoLightGreen self-end mr-4 mt-2 border-[1px] rounded-md border-picoLightGreen absolute top-12"
+                className="fill-picoLightGreen stroke-picoLightGreen self-end mr-4 mt-2 border-[1px] rounded-md border-picoLightGreen absolute top-5"
                 onClick={() => setMenuIsOpen(false)}
               />
               <DrawerHeader className="flex items-center flex-col py-10">
