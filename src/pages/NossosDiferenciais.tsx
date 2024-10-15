@@ -1,6 +1,5 @@
 import Header from '@/components/Header';
 import HomeLogo from '@/components/HomeLogo';
-import { ArrowIcon, PicoIconNoPulse } from '@/components/PicoIcon';
 import { motion, useAnimate } from 'framer-motion';
 import { useEffect } from 'react';
 
