@@ -20,6 +20,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
+import { motion } from 'framer-motion';
 
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
@@ -63,8 +64,23 @@ const formSchema = z.object({
 });
 
 const BeAClient = () => {
+  const [titleBox, animateTitleBox] = useAnimate();
   const [logo, animateLogo] = useAnimate();
   const [isFetchingForm, setIsFetchingForm] = useState(false);
+  const [underline, animateUnderline] = useAnimate();
+
+  useEffect(() => {
+    animateTitleBox(
+      titleBox.current,
+      { x: 0, opacity: 1 },
+      { delay: 0.8, type: 'spring', stiffness: 50, damping: 20 },
+    );
+    animateUnderline(
+      underline.current,
+      { x: 0, opacity: 1 },
+      { delay: 1.5, type: 'spring', stiffness: 50, damping: 20 },
+    );
+  });
 
   useEffect(() => {
     animateLogo(
@@ -137,9 +153,26 @@ const BeAClient = () => {
         />
         <div className="h-full absolute z-10 w-full bg-filter" />
         <HomeLogo className="mt-20 md:mt-10 text-xl w-[250px] md:text-3xl md:w-[360px] h-fit" />
+        <div className="h-fit z-20 mt-8 md:mt-14">
+          <motion.h1
+            ref={titleBox}
+            initial={{ x: -100, opacity: 0 }}
+            className="text-white font-calya z-10 text-3xl md:text-5xl"
+          >
+            Seja cliente
+          </motion.h1>
+          <motion.div
+            ref={underline}
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            className="h-1 w-16 bg-picoLightGreen md:w-full"
+          />
+        </div>
       </div>
       <div className="w-screen  flex flex-col bg-darkbg overflow-x-hidden padding-pages overflow-hidden items-center pb-12">
-        <h2 className="font-calya text-3xl text-center">Agende uma reunião:</h2>
+        <h2 className="font-calya text-2xl md:text-4xl text-center">Agende uma reunião:</h2>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -255,6 +288,9 @@ const BeAClient = () => {
                         </SelectItem>
                         <SelectItem value="10M">
                           Entre R$3.000.000 e R$10.000.000
+                        </SelectItem>
+                        <SelectItem value="plus10M">
+                          Acima de R$10.000.000
                         </SelectItem>
                       </SelectContent>
                     </Select>

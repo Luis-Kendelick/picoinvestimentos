@@ -14,6 +14,8 @@ const FourthSection = () => {
   const transparencyInView = useInView(transparencyRef, { once: true });
   const conformityRef = useRef(null);
   const conformityInView = useInView(conformityRef, { once: true });
+  const refRight = useRef(null);
+  const rightIsInView = useInView(refRight, { once: true });
 
   const [text1, text1Animate] = useAnimate();
   const text1InView = useInView(text1, { once: true });
@@ -23,51 +25,54 @@ const FourthSection = () => {
   const text3InView = useInView(text3, { once: true });
 
   useEffect(() => {
-    text1InView && text1Animate(
-      text1.current,
-      {
-        x: 0,
-        opacity: 1,
-      },
-      {
-        delay: 1,
-        type: 'spring',
-        stiffness: 50,
-        damping: 20,
-      },
-    );
-    text2InView && text2Animate(
-      text2.current,
-      {
-        x: 0,
-        opacity: 1,
-      },
-      {
-        delay: 1.2,
-        type: 'spring',
-        stiffness: 50,
-        damping: 20,
-      },
-    );
-    text3InView && text3Animate(
-      text3.current,
-      {
-        x: 0,
-        opacity: 1,
-      },
-      {
-        delay: 1.4,
-        type: 'spring',
-        stiffness: 50,
-        damping: 20,
-      },
-    );
+    text1InView &&
+      text1Animate(
+        text1.current,
+        {
+          x: 0,
+          opacity: 1,
+        },
+        {
+          delay: 1,
+          type: 'spring',
+          stiffness: 50,
+          damping: 20,
+        },
+      );
+    text2InView &&
+      text2Animate(
+        text2.current,
+        {
+          x: 0,
+          opacity: 1,
+        },
+        {
+          delay: 1.2,
+          type: 'spring',
+          stiffness: 50,
+          damping: 20,
+        },
+      );
+    text3InView &&
+      text3Animate(
+        text3.current,
+        {
+          x: 0,
+          opacity: 1,
+        },
+        {
+          delay: 1.4,
+          type: 'spring',
+          stiffness: 50,
+          damping: 20,
+        },
+      );
   });
 
   return (
     <section
       id="diferenciais"
-      className="relative h-auto w-full z-60 bg-darkbg flex flex-col p-12 px-8 md:p-48 md:py-12 md:pt-20 justify-center md:justify-start overflow-hidden"
+      className="relative h-auto w-full z-60 bg-darkbg flex flex-col p-12 px-8 pb-10 md:p-48 md:py-12 md:pt-20 justify-center md:justify-start overflow-hidden"
     >
       <motion.div
         ref={component}
@@ -268,7 +273,30 @@ const FourthSection = () => {
         <CarouselPrevious className="bg-darkbg fill-white" />
         <CarouselNext className="bg-darkbg fill-white" />
       </Carousel> */}
-      <div className="flex flex-wrap gap-10 justify-center"></div>
+
+      <motion.div
+        ref={refRight}
+        initial={{
+          x: -100,
+          opacity: 0,
+        }}
+        animate={
+          rightIsInView
+            ? {
+                x: 0,
+                opacity: 1,
+              }
+            : undefined
+        }
+        transition={{
+          type: 'spring',
+          stiffness: 50,
+          damping: 20,
+          delay: 0.5,
+          when: 'beforeChildren',
+        }}
+        className="flex h-[1px] w-full bg-picoLightGreen top-9 mt-10 md:hidden"
+      />
     </section>
   );
 };

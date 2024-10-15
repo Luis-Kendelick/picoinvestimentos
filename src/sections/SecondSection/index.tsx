@@ -79,7 +79,7 @@ const SecondSection = () => {
         }}
         ref={aboutUsRef}
       >
-        <div className="flex w-full mt-8 md:mt-18 gap-8 items-center flex-wrap md:flex-nowrap">
+        <div className="flex w-full mt-8 md:mt-18 gap-8 items-center flex-wrap md:flex-nowrap justify-between">
           <motion.h2
             initial={{
               opacity: 0,
@@ -95,7 +95,7 @@ const SecondSection = () => {
               damping: 20,
               delay: 1.4,
             }}
-            className="font-calya text-start text-2xl md:text-3xl text-white flex-1"
+            className="font-calya text-start text-2xl md:text-3xl text-white flex-1 max-w-full md:max-w-[50%]"
           >
             Traçamos estratégias de investimento que se adequam a cada momento
             da sua vida
@@ -115,7 +115,7 @@ const SecondSection = () => {
               damping: 20,
               delay: 1.6,
             }}
-            className="w-full text-lg md:text-xl md:flex-1 text-white tracking-wide font-light text-end"
+            className="w-full text-lg md:text-xl md:flex-1 text-white tracking-wide font-light text-end max-w-full md:max-w-[40%]"
           >
             A <strong className="font-bold text-picoLightGreen">Pico</strong>{' '}
             nasceu da união de profissionais com atuação em grandes instituições

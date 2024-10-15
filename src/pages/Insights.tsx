@@ -60,7 +60,7 @@ const Insights = () => {
           />
         </div>
       </div>
-      <div className="w-screen min-h-screen flex flex-col items-start bg-darkbg overflow-x-hidden padding-pages overflow-hidden px-6">
+      <div className="w-screen min-h-screen flex flex-col items-center bg-darkbg overflow-x-hidden padding-pages overflow-hidden px-6">
         <h2 className="font-calya text-2xl md:text-3xl text-center justify-center">
           Explore os nossos<br /> relatórios e vídeos! <br /> Descubra como podemos
           contribuir para que você alcance seus objetivos financeiros

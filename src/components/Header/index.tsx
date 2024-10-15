@@ -58,10 +58,11 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#contact"
+              href="https://area-do-cliente.picoinvestimentos.com"
+              target='_blank'
               className="text-white hover:text-gray-300 hidden md:flex"
             >
-              SIMULAÇÃO
+              ÁREA DO CLIENTE
             </a>
           </li>
         </ul>
@@ -233,29 +234,6 @@ const Header = () => {
                       className="text-white hover:text-gray-300"
                     >
                       SEJA CLIENTE
-                    </a>
-                    <motion.div
-                      initial={{
-                        width: 0,
-                      }}
-                      animate={{
-                        width: '100%',
-                      }}
-                      transition={{
-                        type: 'spring',
-                        stiffness: 100,
-                        damping: 20,
-                        delay: 0.2,
-                      }}
-                      className="w-full h-[1px] bg-picoLightGreen"
-                    />
-                  </li>
-                  <li>
-                    <a
-                      href="#contact"
-                      className="text-white hover:text-gray-300"
-                    >
-                      SIMULAÇÃO
                     </a>
                     <motion.div
                       initial={{
