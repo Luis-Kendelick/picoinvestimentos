@@ -41,7 +41,7 @@ const Insights = () => {
           className="h-full w-full object-cover z-0 absolute filter grayscale brightness-100 hue-rotate-270"
         />
         <div className="h-full absolute z-10 w-full bg-filter" />
-        <HomeLogo className="mt-20 md:mt-10 text-xl w-[250px] md:text-3xl md:w-[360px] h-fit" />
+        <HomeLogo onClick={() => window.open('/', '_self')} className="mt-20 md:mt-10 text-xl w-[250px] md:text-3xl md:w-[360px] h-fit" />
         <div className="h-fit z-20 mt-8 md:mt-14">
           <motion.h1
             ref={titleBox}

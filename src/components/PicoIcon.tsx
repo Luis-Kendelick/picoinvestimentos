@@ -155,7 +155,7 @@ export const ArrowIcon = ({ classNames }: { classNames?: string }) => {
           </linearGradient>
           <linearGradient id="crazy-gradient" x2="1" y2="0">
             <stop offset="10%" stopColor="var(--color-left)" />
-            <stop offset="70%" stopColor="var(--color-right)" />
+            <stop offset="70%" stopColor="rgb(var(--color-right))" />
           </linearGradient>
         </defs>
         <path

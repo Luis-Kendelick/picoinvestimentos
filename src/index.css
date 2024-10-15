@@ -56,7 +56,7 @@
     --primary-foreground: 0 0% 94%;
     --secondary: 210 40% 96%;
     /* --muted: 253, 31%, 92%; */
-    --pico-light-green: #58F0C1;
+    --pico-light-green: 88 240 193;
     --pico-light-blue: #0165BA;
     --dark-bg: 256 75% 9%;
   }
@@ -163,6 +163,10 @@
     @apply -rotate-45;
   }
 
+  #nossa-abordagem {
+    scroll-margin-bottom: 100px;
+  }
+
   html,
   body,
   #root {
@@ -217,12 +221,12 @@
   }
 
   body {
-    @apply font-calya;
+    @apply font-calya bg-darkbg;
     margin: 0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     color: #fff;
     height: auto;
     line-height: 1.6;

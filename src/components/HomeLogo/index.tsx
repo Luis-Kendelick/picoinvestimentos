@@ -3,7 +3,7 @@ import { PicoIconExtendedPulseHome } from '../PicoIcon';
 import { useState } from 'react';
 import clsx from 'clsx';
 
-const HomeLogo = ({ className }: { className?: string }) => {
+const HomeLogo = ({ className, onClick }: { className?: string, onClick?: () => void }) => {
   const [initialAnimationDone, setInitialAnimationDone] = useState(false);
   const { scrollYProgress } = useScroll();
 
@@ -27,6 +27,7 @@ const HomeLogo = ({ className }: { className?: string }) => {
       }}
       style={{ y: fasterY, opacity: initialAnimationDone ? fadeOpacity : 1 }}
       className={clsx('w-72 z-20 ', className)}
+      onClick={onClick}
     >
       <div className="w-full gap-4 flex justify-center items-center cursor-pointer hover:opacity-80 skew-x-1">
         <PicoIconExtendedPulseHome />

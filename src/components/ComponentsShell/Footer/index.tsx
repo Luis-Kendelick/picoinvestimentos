@@ -9,16 +9,16 @@ const Footer = ({ children }: { children: ReactNode }) => {
   return (
     <>
       {children}
-      <footer className="bg-gradient-to-b from-darkbg to-picoLightBlue w-full flex flex-col md:flex-row justify-around md:justify-between h-72 px-52 items-center">
-        <div className="h-72 w-full md:w-[54rem] flex absolute left-0">
+      <footer className="relative bg-gradient-to-b from-darkbg to-picoLightBlue w-full flex flex-col md:flex-row justify-around md:justify-between h-fit pb-8 pt-8 md:px-52 items-center">
+        <div className="h-full w-full md:w-[54rem] flex absolute left-0">
           <img
             src={'/images/footer-image-compressed.webp'}
             alt="Investimentos"
-            className="h-full z-0 object-fill mask-gradient rounded-3xl"
+            className="h-full z-0 mask-gradient rounded-3xl"
           />
         </div>
         <div className="flex flex-col z-20">
-          <div className="md:size-32 w-80 md:w-96 flex items-center gap-5">
+          <div className="md:size-32 w-80 md:w-96 flex items-center gap-5 mb-5 md:mb-0">
             <PicoIconExtendedPulseHome />
             <div>
               <h2

@@ -13,7 +13,7 @@ const SecondSection = () => {
   const aboutUsIsInView = useInView(aboutUsRef, { once: true });
 
   return (
-    <div className="relative bg-darkbg flex flex-col pt-16 px-8 pb-5 md:p-48 md:pb-10 justify-start md:justify-start overflow-hidden">
+    <section id='about-us' className="relative bg-darkbg flex flex-col pt-16 px-8 pb-5 md:p-48 md:pb-10 justify-start md:justify-start overflow-hidden">
       <motion.div
         ref={component}
         initial={{
@@ -147,7 +147,7 @@ const SecondSection = () => {
           className="flex h-[2px] w-full bg-picoLightGreen top-9 mt-7 md:hidden"
         />
       </motion.div>
-    </div>
+    </section>
   );
 };
 

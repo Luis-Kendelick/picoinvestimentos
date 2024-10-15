@@ -60,7 +60,7 @@ module.exports = {
 				foreground: 'hsl(var(--cardcontent-foreground))'
 			},
 			picoLightGreen: {
-				DEFAULT: 'var(--pico-light-green)',
+				DEFAULT: 'rgb(var(--pico-light-green) / <alpha-value>)',
 				// foreground: 'hsl(var(--pico-light-green-foreground))'
 			},
 			picoLightBlue: {

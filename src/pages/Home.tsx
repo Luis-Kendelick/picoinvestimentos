@@ -6,8 +6,19 @@ import FourthSection from '@/sections/FourthSection';
 import SecondSection from '@/sections/SecondSection';
 import SixthSection from '@/sections/SixthSection';
 import ThirdSection from '@/sections/ThirdSection';
+import { useEffect } from 'react';
 
 const Home = () => {
+  useEffect(() => {
+    if (window.location.hash) {
+      const sectionId = window.location.hash.substring(1);
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'auto' });
+      }
+    }
+  }, []);
+
   return (
     <>
       <Header />
@@ -34,7 +45,9 @@ const Home = () => {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
+      <div id='nossa-abordagem'>
       <SixthSection />
+      </div>
     </>
   );
 };

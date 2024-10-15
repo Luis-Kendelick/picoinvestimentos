@@ -17,7 +17,7 @@ const Header = () => {
         <ul className="flex space-x-0 md:space-x-14 items-center font-normal text-sm w-fit justify-self-center">
           <li>
             <a
-              href="/"
+              href="/#about-us"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
               SOBRE NÓS
@@ -33,13 +33,15 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#services"
+              href="/#nossa-abordagem"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
               ABORDAGEM
             </a>
           </li>
-          <li className="w-14">{!menuIsOpen && <PicoIconPulse />}</li>
+          <li className="w-14" onClick={() => window.open('/', '_self')}>
+            {!menuIsOpen && <PicoIconPulse />}
+          </li>
           <li>
             <a
               href="/insights"
@@ -59,7 +61,7 @@ const Header = () => {
           <li>
             <a
               href="https://area-do-cliente.picoinvestimentos.com"
-              target='_blank'
+              target="_blank"
               className="text-white hover:text-gray-300 hidden md:flex"
             >
               ÁREA DO CLIENTE
@@ -71,6 +73,7 @@ const Header = () => {
             direction="bottom"
             onOpenChange={() => setMenuIsOpen(!menuIsOpen)}
             open={menuIsOpen}
+            disablePreventScroll
           >
             <DrawerTrigger>
               <MenuIcon size={40} className="text-white stroke-1" />
@@ -118,7 +121,7 @@ const Header = () => {
                   <li>
                     <a
                       href="https://area-do-cliente.picoinvestimentos.com"
-                      target='_blank'
+                      target="_blank"
                       className="text-white hover:text-gray-300"
                     >
                       ÁREA DO CLIENTE
@@ -140,7 +143,23 @@ const Header = () => {
                     />
                   </li>
                   <li>
-                    <a href="/" className="text-white hover:text-gray-300">
+                    <a
+                      onClick={() => {
+                        setMenuIsOpen(false);
+                        setTimeout(() => {
+                          const section = document.getElementById('about-us');
+                          if (section) {
+                            section.scrollIntoView({
+                              behavior: 'auto',
+                              block: 'start',
+                              inline: 'start',
+                            });
+                          }
+                        }, 800);
+                      }}
+                      href="/#about-us"
+                      className="text-white hover:text-gray-300"
+                    >
                       SOBRE NÓS
                     </a>
                     <motion.div
@@ -184,7 +203,28 @@ const Header = () => {
                   </li>
                   <li>
                     <a
-                      href="#services"
+                      href="/#nossa-abordagem"
+                      onClick={() => {
+                        setMenuIsOpen(false);
+                        setTimeout(() => {
+                          const section =
+                            document.getElementById('nossa-abordagem');
+                          if (section) {
+                            const topPosition =
+                              section.getBoundingClientRect().top +
+                              window.pageYOffset;
+
+                            // Adiciona um offset (por exemplo, 100px a mais)
+                            const offset = 50;
+
+                            // Faz o scroll até a posição do elemento menos o offset
+                            window.scrollTo({
+                              top: topPosition - offset,
+                              behavior: 'smooth',
+                            });
+                          }
+                        }, 800);
+                      }}
                       className="text-white hover:text-gray-300"
                     >
                       ABORDAGEM
