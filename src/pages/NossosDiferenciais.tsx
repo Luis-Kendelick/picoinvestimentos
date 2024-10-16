@@ -143,7 +143,7 @@ const NossosDiferenciais = () => {
             </div>
             Diferentemente de outros agentes do mercado financeiro, atuamos em
             conjunto com advogados experientes, que monitoram as frequentes
-            mudanças nas normas regulatórias e tributárias que afetamos
+            mudanças nas normas regulatórias e tributárias que afetam os
             planejamentos financeiros.
           </div>
         </div>

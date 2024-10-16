@@ -207,7 +207,7 @@ const FourthSection = () => {
             className="w-full text-lg md:text-xl text-end md:flex-1 text-white tracking-wide font-light"
           >
             Não nos limitamos a monitorar o mercado financeiro, fornecer
-            recomendações de investimento e gerenciar o seu portfólio de ativo.
+            recomendações de investimento e gerenciar o seu portfólio de ativos.
           </motion.h2>
           <br />
           <motion.h2
