@@ -170,11 +170,11 @@ const FifthSection = () => {
               Apresentação do trabalho.
             </h2>
 
-            {/* <div className="invisible md:flex absolute h-full left-[98%] top-[75%] rotate-180 md:rotate-90 md:-top-7 md:left-[100%]">
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-            </div> */}
+            <div className="hidden md:flex flex-row absolute -top-4 md:left-[95%] justify-center items-center">
+              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen rotate-90" />
+              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen rotate-90" />
+              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen rotate-90" />
+            </div>
           </motion.div>
           <div className="md:hidden rotate-180 md:rotate-90 w-full flex justify-center my-1">
             <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
@@ -191,11 +191,11 @@ const FifthSection = () => {
               Coletamos informações necessárias para a
               elaboração do seu planejamento financeiro.
             </h2>
-            {/* <div className="invisible md:visible absolute right-[98%] top-[90%] rotate-180 md:rotate-90 md:top-[5.3rem] md:left-[105%]">
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-            </div> */}
+            <div className="hidden md:flex flex-row absolute -top-4 md:left-[95%] justify-center items-center">
+              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen rotate-90" />
+              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen rotate-90" />
+              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen rotate-90" />
+            </div>
           </motion.div>
           <div className="md:hidden rotate-180 md:rotate-90 w-full flex justify-center my-1">
             <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
@@ -213,11 +213,11 @@ const FifthSection = () => {
               personalizado, com análise de risco, taxa e retorno e explicaremos
               a nossa estratégia.
             </h2>
-            {/* <div className="invisible md:visible absolute left-[98%] top-[90%] rotate-180 md:rotate-90 md:-top-9 md:left-[95%]">
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
-            </div> */}
+            <div className="hidden md:flex flex-row absolute -top-4 md:left-[95%] justify-center items-center">
+              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen rotate-90" />
+              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen rotate-90" />
+              <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen rotate-90" />
+            </div>
           </motion.div>
           <div className="md:hidden rotate-180 md:rotate-90 w-full flex justify-center my-1">
             <ArrowIcon classNames="h-6 w-6 fill-picoLightGreen" />
