@@ -30,7 +30,7 @@ import clsx from 'clsx';
 import emailjs from '@emailjs/browser';
 import { CheckCircleIcon, XIcon } from 'lucide-react';
 
-const apiKey = import.meta.env.VITE_API_KEY;
+const apiKey = import.meta.env.EMAILJS_PRIVATE_KEY;
 
 const formSchema = z.object({
   name: z
