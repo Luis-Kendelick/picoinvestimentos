@@ -107,6 +107,7 @@ const BeAClient = () => {
   });
 
   const sendEmail = async (data: z.infer<typeof formSchema>) => {
+    console.log("🚀 ~ sendEmail ~ data:", data)
     setIsFetchingForm(true);
     try {
       await emailjs.send(
@@ -120,7 +121,7 @@ const BeAClient = () => {
           investiment: data.investiment,
           comments: data.comments,
         },
-        apiKey, // private KEY
+        'YLhcVyurQPPFALtCe',
       );
     } catch (error) {
       toast({
