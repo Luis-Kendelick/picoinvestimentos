@@ -30,6 +30,8 @@ import clsx from 'clsx';
 import emailjs from '@emailjs/browser';
 import { CheckCircleIcon, XIcon } from 'lucide-react';
 
+const apiKey = import.meta.env.VITE_API_KEY;
+
 const formSchema = z.object({
   name: z
     .string({
@@ -118,7 +120,7 @@ const BeAClient = () => {
           investiment: data.investiment,
           comments: data.comments,
         },
-        'YLhcVyurQPPFALtCe', // public KEY
+        apiKey, // private KEY
       );
     } catch (error) {
       toast({
