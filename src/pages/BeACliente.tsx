@@ -27,6 +27,8 @@ import { useForm } from 'react-hook-form';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
 import clsx from 'clsx';
+import emailjs from '@emailjs/browser';
+import { CheckCircleIcon, XIcon } from 'lucide-react';
 
 const formSchema = z.object({
   name: z
@@ -102,28 +104,53 @@ const BeAClient = () => {
     },
   });
 
-  const fetchFake = async (data: z.infer<typeof formSchema>) => {
+  const sendEmail = async (data: z.infer<typeof formSchema>) => {
     setIsFetchingForm(true);
     try {
-      const response = await fetch(
-        'https://jsonplaceholder.typicode.com/posts',
+      await emailjs.send(
+        'service_t4f4b9b', // service ID
+        'template_zwx5ok1',  // template ID
         {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          },
+          name: data.name,
+          lastname: data.lastname,
+          phone: data.phone,
+          email: data.email,
+          investiment: data.investiment,
+          comments: data.comments,
         },
+        'YLhcVyurQPPFALtCe', // public KEY
       );
-      const json = await response.json();
-      console.log(json);
     } catch (error) {
-      console.error('Erro:', error);
+      toast({
+        className: 'bg-red-200 font-montserrat',
+        description: (
+          <div className="flex items-center gap-2">
+            <XIcon className="stroke-destructive size-6" />
+            <div>
+              <h2 className="font-semibold">Erro ao enviar agendamento</h2>
+              <h2 className="font-light">
+                Tente novamente mais tarde ou entre em contato no e-mail
+                <strong> contato@picoinvestimentos.com</strong>
+              </h2>
+            </div>
+          </div>
+        ),
+        duration: 8000,
+      });
     } finally {
       setIsFetchingForm(false);
       toast({
-        title: 'Reunião agendada com sucesso!',
-        description: 'Em breve entraremos em contato.',
+        className: 'font-montserrat',
+        variant: 'default',
+        description: (
+          <div className="flex items-center gap-2">
+            <CheckCircleIcon className="stroke-constructive" />
+            <div>
+              <h2 className="font-semibold">Reunião agendada com sucesso!</h2>
+              <h2 className="font-light">Em breve entraremos em contato.</h2>
+            </div>
+          </div>
+        ),
         duration: 5000,
       });
       form.reset();
@@ -131,12 +158,8 @@ const BeAClient = () => {
     }
   };
 
-  // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-    fetchFake(values);
+    sendEmail(values);
   }
 
   return (
@@ -152,7 +175,10 @@ const BeAClient = () => {
           className="h-full w-full object-cover z-0 absolute filter grayscale brightness-100 hue-rotate-270"
         />
         <div className="h-full absolute z-10 w-full bg-filter" />
-        <HomeLogo onClick={() => window.open('/', '_self')} className="mt-20 md:mt-10 text-xl w-[250px] md:text-3xl md:w-[360px] h-fit" />
+        <HomeLogo
+          onClick={() => window.open('/', '_self')}
+          className="mt-20 md:mt-10 text-xl w-[250px] md:text-3xl md:w-[360px] h-fit"
+        />
         <div className="h-fit z-20 mt-8 md:mt-14">
           <motion.h1
             ref={titleBox}
@@ -172,7 +198,9 @@ const BeAClient = () => {
         </div>
       </div>
       <div className="w-screen  flex flex-col bg-darkbg overflow-x-hidden padding-pages overflow-hidden items-center pb-12">
-        <h2 className="font-calya text-2xl md:text-4xl text-center">Agende uma reunião:</h2>
+        <h2 className="font-calya text-2xl md:text-4xl text-center">
+          Agende uma reunião:
+        </h2>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -185,9 +213,14 @@ const BeAClient = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem className="min-w-52 flex-1">
-                    <FormControl className={clsx("font-montserrat h-12 text-darkbg font-semibold bg-white", {
-                      'border-red-500': form.formState.errors.name,
-                    })}>
+                    <FormControl
+                      className={clsx(
+                        'font-montserrat h-12 text-darkbg font-semibold bg-white',
+                        {
+                          'border-red-500': form.formState.errors.name,
+                        },
+                      )}
+                    >
                       <Input
                         disabled={isFetchingForm}
                         placeholder="Nome *"
@@ -203,9 +236,14 @@ const BeAClient = () => {
                 name="lastname"
                 render={({ field }) => (
                   <FormItem className="min-w-52 flex-1">
-                    <FormControl className={clsx("font-montserrat h-12 text-darkbg font-semibold bg-white", {
-                      'border-red-500': form.formState.errors.lastname,
-                    })}>
+                    <FormControl
+                      className={clsx(
+                        'font-montserrat h-12 text-darkbg font-semibold bg-white',
+                        {
+                          'border-red-500': form.formState.errors.lastname,
+                        },
+                      )}
+                    >
                       <Input
                         disabled={isFetchingForm}
                         placeholder="Sobrenome *"
@@ -223,9 +261,14 @@ const BeAClient = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem className="min-w-52 flex-1">
-                    <FormControl className={clsx("font-montserrat h-12 text-darkbg font-semibold bg-white", {
-                      'border-red-500': form.formState.errors.email,
-                    })}>
+                    <FormControl
+                      className={clsx(
+                        'font-montserrat h-12 text-darkbg font-semibold bg-white',
+                        {
+                          'border-red-500': form.formState.errors.email,
+                        },
+                      )}
+                    >
                       <Input
                         disabled={isFetchingForm}
                         placeholder="E-mail *"
@@ -242,9 +285,14 @@ const BeAClient = () => {
                 name="phone"
                 render={({ field }) => (
                   <FormItem className="min-w-52 flex-1">
-                    <FormControl className={clsx("font-montserrat h-12 text-darkbg font-semibold bg-white", {
-                      'border-red-500': form.formState.errors.phone,
-                    })}>
+                    <FormControl
+                      className={clsx(
+                        'font-montserrat h-12 text-darkbg font-semibold bg-white',
+                        {
+                          'border-red-500': form.formState.errors.phone,
+                        },
+                      )}
+                    >
                       <InputMask
                         disabled={isFetchingForm}
                         mask="(99) 99999-9999"
@@ -280,16 +328,16 @@ const BeAClient = () => {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent className="font-montserrat font-semibold">
-                        <SelectItem value="1M">
+                        <SelectItem value="Entre R$100.000 e R$1.000.000">
                           Entre R$100.000 e R$1.000.000
                         </SelectItem>
-                        <SelectItem value="3M">
+                        <SelectItem value="Entre R$1.000.000 e R$3.000.000">
                           Entre R$1.000.000 e R$3.000.000
                         </SelectItem>
-                        <SelectItem value="10M">
+                        <SelectItem value="Entre R$3.000.000 e R$10.000.000">
                           Entre R$3.000.000 e R$10.000.000
                         </SelectItem>
-                        <SelectItem value="plus10M">
+                        <SelectItem value="Acima de R$10.000.000">
                           Acima de R$10.000.000
                         </SelectItem>
                       </SelectContent>
