@@ -30,7 +30,7 @@ import clsx from 'clsx';
 import emailjs from '@emailjs/browser';
 import { CheckCircleIcon, XIcon } from 'lucide-react';
 
-const apiKey = import.meta.env.EMAILJS_PRIVATE_KEY;
+const apiKey = process.env.EMAILJS_PRIVATE_KEY;
 
 const formSchema = z.object({
   name: z
@@ -68,6 +68,7 @@ const formSchema = z.object({
 });
 
 const BeAClient = () => {
+  console.log('🚀 ~ apiKey:', apiKey);
   const [titleBox, animateTitleBox] = useAnimate();
   const [logo, animateLogo] = useAnimate();
   const [isFetchingForm, setIsFetchingForm] = useState(false);
@@ -107,12 +108,12 @@ const BeAClient = () => {
   });
 
   const sendEmail = async (data: z.infer<typeof formSchema>) => {
-    console.log("🚀 ~ sendEmail ~ data:", data)
+    console.log('🚀 ~ sendEmail ~ data:', data);
     setIsFetchingForm(true);
     try {
       await emailjs.send(
         'service_t4f4b9b', // service ID
-        'template_zwx5ok1',  // template ID
+        'template_zwx5ok1', // template ID
         {
           name: data.name,
           lastname: data.lastname,
