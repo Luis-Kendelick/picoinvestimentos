@@ -150,7 +150,7 @@ const FifthSection = () => {
             x: 100,
           }}
           ref={text3}
-          className="w-full text-lg md:text-xl md:text-center md:flex-1 text-white tracking-wide font-light"
+          className="w-full text-lg md:text-xl md:text-start md:flex-1 text-white tracking-wide font-light"
         >
           O nosso fluxo de trabalho começa com uma reunião inicial sem
           compromisso, seguida da coleta dos dados, a partir do que elaboramos
