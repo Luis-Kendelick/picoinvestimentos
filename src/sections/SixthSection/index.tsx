@@ -1,5 +1,4 @@
 import YoutubeEmbed from '@/components/EmbedVideo';
-import { listProjectPDFs } from '@/lib/utils';
 import {
   motion,
   useAnimate,
