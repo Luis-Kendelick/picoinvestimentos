@@ -1,3 +1,5 @@
+import YoutubeEmbed from '@/components/EmbedVideo';
+import { listProjectPDFs } from '@/lib/utils';
 import {
   motion,
   useAnimate,
@@ -138,8 +140,8 @@ const SixthSection = () => {
         animate={
           componentIsInView
             ? {
-                scale: 1,
-              }
+              scale: 1,
+            }
             : undefined
         }
         transition={{
@@ -159,9 +161,9 @@ const SixthSection = () => {
           animate={
             leftIsInView
               ? {
-                  x: 0,
-                  opacity: 1,
-                }
+                x: 0,
+                opacity: 1,
+              }
               : undefined
           }
           transition={{
@@ -231,6 +233,10 @@ const SixthSection = () => {
             <ArrowIcon classNames="ml-1 h-4 w-4 rotate-90 fill-picoLightGreen" />
           </div>
         </motion.a> */}
+        <div className='bg-picoLightGreen rounded-md p-1 sm:p-3 w-full md:max-w-[80%]'>
+          <h2 className='text-picoLightBlue font-semibold mb-1 ml-2 sm:mb-3 sm:ml-0'>Pico Investimentos - Apresentação</h2>
+          <YoutubeEmbed embedId="Cz0uSfptbWk" />
+        </div>
       </div>
       {/* <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 -left-[270px] opacity-25" />
       <ArrowIcon classNames="-rotate-90 absolute z-0 h-[29rem] w-[29rem] green-gradient top-8 left-0 opacity-25" />

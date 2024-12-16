@@ -110,3 +110,37 @@ export enum EMenuItems {
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+export const listProjectPDFs = () => {
+  const pdfContext = import.meta.glob('/public/documents/*.pdf');
+  return Object.keys(pdfContext).map(path => ({
+    name: path.split('/').pop(),
+    path: path.replace('/public/', '')
+  }));
+};
+
+export const downloadPDF = async (filename: string) => {
+  try {
+    // Construir URL completo do PDF
+    const pdfUrl = `/${filename}`;
+
+    // Fazer fetch do arquivo
+    const response = await fetch(pdfUrl);
+    const blob = await response.blob();
+
+    // Criar link de download
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.download = filename;
+
+    // Disparar download
+    document.body.appendChild(link);
+    link.click();
+
+    // Limpar após download
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(link.href);
+  } catch (error) {
+    console.error('Erro no download do PDF:', error);
+  }
+};
