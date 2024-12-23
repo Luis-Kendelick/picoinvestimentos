@@ -1,7 +1,7 @@
 import { PicoIconExtendedPulseHome } from '@/components/PicoIcon';
 import { useToast } from '@/hooks/use-toast';
 import { InstagramLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
-import { CheckCheckIcon, GlobeIcon, MailIcon, PhoneIcon, YoutubeIcon } from 'lucide-react';
+import { CheckCheckIcon, FacebookIcon, GlobeIcon, MailIcon, PhoneIcon, YoutubeIcon } from 'lucide-react';
 import { ReactNode } from 'react';
 
 const Footer = ({ children }: { children: ReactNode }) => {
@@ -18,7 +18,7 @@ const Footer = ({ children }: { children: ReactNode }) => {
           />
         </div>
         <div className="flex flex-col z-20">
-          <div className="md:size-32 w-80 md:w-96 flex items-center gap-5 mb-5 md:mb-0">
+          <div className="md:size-32 w-80 md:w-96 flex items-center gap-5">
             <PicoIconExtendedPulseHome />
             <div>
               <h2
@@ -34,6 +34,10 @@ const Footer = ({ children }: { children: ReactNode }) => {
                 Investimentos
               </h2>
             </div>
+          </div>
+          <div className='flex gap-5 justify-around mb-5 md:mb-0 font-montserrat'>
+            <a className='hover:text-picoLightGreen cursor-pointer' href='/politica-de-privacidade'>Política de privacidade</a>
+            <a className='hover:text-picoLightGreen cursor-pointer' href='/termo-de-uso'>Termo de uso</a>
           </div>
         </div>
         <div className="flex flex-col font-montserrat font-light z-20">
@@ -79,11 +83,12 @@ const Footer = ({ children }: { children: ReactNode }) => {
               contato@picoinvestimentos.com
             </a>
           </div>
-          <br/>
+          <br />
           <div className="flex gap-5 justify-center md:justify-start">
-            <InstagramLogoIcon className="size-8 md:size-9" />
-            <LinkedInLogoIcon className="size-8 md:size-9" />
-            <YoutubeIcon className="size-8 md:size-9" />
+            <InstagramLogoIcon className="size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.instagram.com/picoinvestimentos/', '_blank')} />
+            <FacebookIcon className="size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.facebook.com/profile.php?id=61569535462654', '_blank')} />
+            <LinkedInLogoIcon className="size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.linkedin.com/company/pico-investimentos/', '_blank')} />
+            <YoutubeIcon className="size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.youtube.com/@picoinvestimentos', '_blank')} />
           </div>
         </div>
       </footer>

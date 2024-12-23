@@ -112,7 +112,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const listProjectPDFs = () => {
-  const pdfContext = import.meta.glob('/public/documents/*.pdf');
+  const pdfContext = import.meta.glob('/public/documents/*');
   return Object.keys(pdfContext).map(path => ({
     name: path.split('/').pop(),
     path: path.replace('/public/', '')

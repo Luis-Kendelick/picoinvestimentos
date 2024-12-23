@@ -2,6 +2,8 @@ import BeAClient from '@/pages/BeACliente';
 import Home from '@/pages/Home';
 import Insights from '@/pages/Insights';
 import NossosDiferenciais from '@/pages/NossosDiferenciais';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
+import UsageTerms from '@/pages/UsageTerms';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const Router = () => {
@@ -20,6 +22,8 @@ const Router = () => {
         <Route path="/nossos-diferenciais" element={<NossosDiferenciais />} />
         <Route path="/insights" element={<Insights />} />
         <Route path="/seja-cliente" element={<BeAClient />} />
+        <Route path='/politica-de-privacidade' element={<PrivacyPolicy />} />
+        <Route path='/termo-de-uso' element={<UsageTerms />} />
       </Routes>
     </BrowserRouter>
   );
