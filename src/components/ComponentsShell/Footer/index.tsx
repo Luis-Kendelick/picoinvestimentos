@@ -44,8 +44,8 @@ const Footer = ({ children }: { children: ReactNode }) => {
           <h2>Rua Afonso Braz, 473, 9.º andar, {window.innerWidth < 765 && <br />} Vila Nova Conceição</h2>
           <h2>CEP 04511-011 l São Paulo, SP, Brasil</h2>
           <br />
-          <div className="flex gap-3">
-            <PhoneIcon className="fill-white" />
+          <div className="flex gap-3 items-center">
+            <PhoneIcon className="fill-white size-4 md:size-6" />
             <h2
               onClick={() => {
                 navigator.clipboard.writeText('+55 (11) 2500-6905');
@@ -63,8 +63,8 @@ const Footer = ({ children }: { children: ReactNode }) => {
               +55 (11) 2500-6905
             </h2>
           </div>
-          <div className="flex gap-3">
-            <GlobeIcon />
+          <div className="flex gap-3 items-center">
+            <GlobeIcon className='size-4 md:size-6' />
             <a
               href="https://www.picoinvestimentos.com"
               target="_blank"
@@ -73,8 +73,8 @@ const Footer = ({ children }: { children: ReactNode }) => {
               www.picoinvestimentos.com
             </a>
           </div>
-          <div className="flex gap-3">
-            <MailIcon />
+          <div className="flex gap-3 items-center">
+            <MailIcon className='size-4 md:size-6' />
             <a
               href="mailto:contato@picoinvestimentos.com"
               target="_blank"
@@ -85,10 +85,10 @@ const Footer = ({ children }: { children: ReactNode }) => {
           </div>
           <br />
           <div className="flex gap-5 justify-center md:justify-start">
-            <InstagramLogoIcon className="size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.instagram.com/picoinvestimentos/', '_blank')} />
-            <FacebookIcon className="size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.facebook.com/profile.php?id=61569535462654', '_blank')} />
-            <LinkedInLogoIcon className="size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.linkedin.com/company/pico-investimentos/', '_blank')} />
-            <YoutubeIcon className="size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.youtube.com/@picoinvestimentos', '_blank')} />
+            <InstagramLogoIcon className="md:p-0 p-1 size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.instagram.com/picoinvestimentos/', '_blank')} />
+            <FacebookIcon className="md:p-0 p-1 size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.facebook.com/profile.php?id=61569535462654', '_blank')} />
+            <LinkedInLogoIcon className="md:p-0 p-1 size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.linkedin.com/company/pico-investimentos/', '_blank')} />
+            <YoutubeIcon className="md:p-0 p-1 size-8 md:size-9 hover:bg-slate-500 rounded-sm cursor-pointer" onClick={() => window.open('https://www.youtube.com/@picoinvestimentos', '_blank')} />
           </div>
         </div>
       </footer>
