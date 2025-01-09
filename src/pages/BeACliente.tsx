@@ -68,7 +68,6 @@ const formSchema = z.object({
 });
 
 const BeAClient = () => {
-  // console.log('🚀 ~ apiKey:', apiKey);
   const [titleBox, animateTitleBox] = useAnimate();
   const [logo, animateLogo] = useAnimate();
   const [isFetchingForm, setIsFetchingForm] = useState(false);
@@ -108,12 +107,11 @@ const BeAClient = () => {
   });
 
   const sendEmail = async (data: z.infer<typeof formSchema>) => {
-    console.log('🚀 ~ sendEmail ~ data:', data);
     setIsFetchingForm(true);
     try {
       await emailjs.send(
-        'service_t4f4b9b', // service ID
-        'template_zwx5ok1', // template ID
+        'service_t4f4b9b',
+        'template_zwx5ok1',
         {
           name: data.name,
           lastname: data.lastname,
