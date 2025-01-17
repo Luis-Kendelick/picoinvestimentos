@@ -106,18 +106,22 @@ const Insights = () => {
             <div className='bg-picoLightGreen w-11/12 h-1 mt-4' />
           </div>
           <div className='flex justify-around flex-wrap w-full gap-5'>
-            <div className='bg-picoLightGreen rounded-md p-1 sm:p-3 w-full md:max-w-[49%] relative'>
+            <div className='bg-picoLightGreen rounded-md p-1 sm:p-3 w-full md:max-w-[39%] relative'>
               <h2 className='text-picoLightBlue font-semibold mb-1 ml-2 sm:mb-2 sm:ml-0 text-sm sm:text-xl'>Pico Investimentos - Apresentação</h2>
               <YoutubeEmbed embedId="Cz0uSfptbWk" />
               {/* <Circle fill='red' color='red' className='absolute top-0 right-0 h-3 animate-pulse' /> */}
             </div>
-            <div className='bg-picoLightGreen rounded-md p-1 sm:p-3 w-full md:max-w-[49%]'>
+            <div className='bg-picoLightGreen rounded-md p-1 sm:p-3 w-full md:max-w-[39%]'>
               <h2 className='text-picoLightBlue font-semibold mb-1 ml-2 sm:mb-2 sm:ml-0 text-sm sm:text-xl'>Pico Investimentos - Tesouro Direto</h2>
               <YoutubeEmbed embedId="xQrzWm8z4G4" />
             </div>
-            <div className='bg-picoLightGreen rounded-md p-1 sm:p-3 w-full md:max-w-[49%]'>
+            <div className='bg-picoLightGreen rounded-md p-1 sm:p-3 w-full md:max-w-[39%]'>
               <h2 className='text-picoLightBlue font-semibold mb-1 ml-2 sm:mb-2 sm:ml-0 text-sm sm:text-xl'>Pico Investimentos - Renda Fixa Passiva</h2>
               <YoutubeEmbed embedId="bavu-OBIyV8" />
+            </div>
+            <div className='bg-picoLightGreen rounded-md p-1 sm:p-3 w-full md:max-w-[39%]'>
+              <h2 className='text-picoLightBlue font-semibold mb-1 ml-2 sm:mb-2 sm:ml-0 text-sm sm:text-xl'>Pico Investimentos - Revar</h2>
+              <YoutubeEmbed embedId="uAsUaMtv-70" />
             </div>
           </div>
           <div className='w-full flex flex-col items-center mt-3'>
