@@ -137,6 +137,10 @@ const Insights = () => {
               <p>Carta Mensal - Janeiro de 2025</p>
               <DownloadIcon className='h-7 w-7 p-1 transition-colors duration-200 hover:bg-slate-400 rounded-md' onClick={() => downloadPDF(pdfs.find(pdf => pdf.name === 'carta-mensal-01-25.pdf')?.path ?? '')} />
             </div>
+            <div className='p-5 bg-slate-700 rounded-md cursor-pointer w-full md:max-w-[48%] flex justify-between items-center'>
+              <p>Carta Mensal - Fevereiro de 2025</p>
+              <DownloadIcon className='h-7 w-7 p-1 transition-colors duration-200 hover:bg-slate-400 rounded-md' onClick={() => downloadPDF(pdfs.find(pdf => pdf.name === 'carta-mensal-02-25.pdf')?.path ?? '')} />
+            </div>
           </div>
           <div className='w-full flex flex-col items-center mt-3'>
             <h2 className='font-calya text-xl md:text-2xl text-center justify-center'>Newsletter</h2>
@@ -146,6 +150,10 @@ const Insights = () => {
             <div className='p-5 bg-slate-700 rounded-md cursor-pointer w-full md:max-w-[48%] flex justify-between items-center'>
               <p>Newsletter - Dezembro de 2024</p>
               <DownloadIcon className='h-7 w-7 p-1 transition-colors duration-200 hover:bg-slate-400 rounded-md' onClick={() => downloadPDF(pdfs.find(pdf => pdf.name === 'newsletter-12-24.pdf')?.path ?? '')} />
+            </div>
+            <div className='p-5 bg-slate-700 rounded-md cursor-pointer w-full md:max-w-[48%] flex justify-between items-center'>
+              <p>Newsletter - Janeiro de 2025</p>
+              <DownloadIcon className='h-7 w-7 p-1 transition-colors duration-200 hover:bg-slate-400 rounded-md' onClick={() => downloadPDF(pdfs.find(pdf => pdf.name === 'newsletter-01-25.pdf')?.path ?? '')} />
             </div>
           </div>
         </div>
