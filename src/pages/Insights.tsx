@@ -54,7 +54,7 @@ const Insights: React.FC = () => {
   };
 
   const VideoCard: React.FC<VideoCardProps> = ({ title, embedId }) => (
-    <div className='bg-picoLightGreen rounded-md p-3 w-full md:max-w-[39%]'>
+    <div className='bg-picoLightGreen rounded-md p-3 w-full md:max-w-[48%]'>
       <h2 className='text-picoLightBlue font-semibold text-xl'>{title}</h2>
       <YoutubeEmbed embedId={embedId} />
     </div>
@@ -91,7 +91,7 @@ const Insights: React.FC = () => {
         <h2 className="font-calya text-2xl md:text-3xl text-center">Explore nossos relatórios e vídeos! Descubra como podemos ajudar nos seus objetivos financeiros.</h2>
 
         <SectionTitle title="Vídeos" />
-        <div className='flex justify-around flex-wrap w-full gap-5'>
+        <div className='flex justify-around flex-wrap w-11/12 md:w-10/12 gap-8'>
           {[
             { title: "Pico Investimentos - Apresentação", embedId: "Cz0uSfptbWk" },
             { title: "Pico Investimentos - Tesouro Direto", embedId: "xQrzWm8z4G4" },
