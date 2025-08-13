@@ -39,6 +39,10 @@ export const docs = {
       file: 'carta-mensal-07-25.pdf',
       date: '2025-07-02',
     },
+    {
+      file: 'carta-mensal-08-25.pdf',
+      date: '2025-08-02',
+    },
   ],
   newsletters: [
     {
