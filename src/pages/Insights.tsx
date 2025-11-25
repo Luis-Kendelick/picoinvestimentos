@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useAnimate } from 'framer-motion';
-import { format } from 'date-fns';
+import { format, getYear } from 'date-fns';
 import { ptBR } from 'date-fns/locale/pt-BR';
 import { DownloadIcon } from 'lucide-react';
 
@@ -32,9 +32,55 @@ interface ReportCardProps {
   pdfs: PdfFile[];
 }
 
+interface YearTabsProps {
+  selectedYear: number;
+  onSelectYear: (year: number) => void;
+  years: number[];
+}
+
+const currentYear = new Date().getFullYear();
+const availableYears = Array.from({ length: currentYear - 2024 + 1 }, (_, i) => 2024 + i);
+
+const VideoCard: React.FC<VideoCardProps> = ({ title, embedId }) => (
+  <div className='bg-picoLightGreen rounded-md p-3 w-full md:max-w-[48%]'>
+    <h2 className='text-picoLightBlue font-semibold text-xl'>{title}</h2>
+    <YoutubeEmbed embedId={embedId} />
+  </div>
+);
+
+const ReportCard: React.FC<ReportCardProps> = ({ type, doc, pdfs }) => (
+  <div className='p-5 bg-slate-700 rounded-md cursor-pointer w-full md:max-w-[48%] flex justify-between items-center'>
+    <p>{`${type} - ${format(doc.date, "MMMM 'de' yyyy", { locale: ptBR })}`}</p>
+    <DownloadIcon
+      className='h-7 w-7 p-1 transition-colors duration-200 hover:bg-slate-400 rounded-md'
+      onClick={() => downloadPDF(pdfs.find(pdf => pdf.name === doc.file)?.path || '')}
+    />
+  </div>
+);
+
+const YearTabs: React.FC<YearTabsProps> = ({ selectedYear, onSelectYear, years }) => (
+  <div className="flex gap-2 mb-4">
+    {years.map((year) => (
+      <button
+        key={year}
+        onClick={() => onSelectYear(year)}
+        className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${
+          selectedYear === year
+            ? 'bg-picoLightGreen text-picoLightBlue shadow-lg shadow-picoLightGreen/30'
+            : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+        }`}
+      >
+        {year}
+      </button>
+    ))}
+  </div>
+);
+
 const Insights: React.FC = () => {
   const [titleBox, logo, underline] = [useAnimate(), useAnimate(), useAnimate()];
   const [pdfs, setPdfs] = useState<PdfFile[]>([]);
+  const [reportsYear, setReportsYear] = useState<number>(currentYear);
+  const [newsletterYear, setNewsletterYear] = useState<number>(currentYear);
 
   useEffect(() => {
     animateElements();
@@ -53,22 +99,19 @@ const Insights: React.FC = () => {
     }
   };
 
-  const VideoCard: React.FC<VideoCardProps> = ({ title, embedId }) => (
-    <div className='bg-picoLightGreen rounded-md p-3 w-full md:max-w-[48%]'>
-      <h2 className='text-picoLightBlue font-semibold text-xl'>{title}</h2>
-      <YoutubeEmbed embedId={embedId} />
-    </div>
-  );
+  const filteredReports = useMemo(() => {
+    const allDocs = dateOrderedDocs();
+    return allDocs.monthlyReports.filter(
+      (doc) => getYear(new Date(doc.date)) === reportsYear
+    );
+  }, [reportsYear]);
 
-  const ReportCard: React.FC<ReportCardProps> = ({ type, doc, pdfs }) => (
-    <div className='p-5 bg-slate-700 rounded-md cursor-pointer w-full md:max-w-[48%] flex justify-between items-center'>
-      <p>{`${type} - ${format(doc.date, "MMMM 'de' yyyy", { locale: ptBR })}`}</p>
-      <DownloadIcon
-        className='h-7 w-7 p-1 transition-colors duration-200 hover:bg-slate-400 rounded-md'
-        onClick={() => downloadPDF(pdfs.find(pdf => pdf.name === doc.file)?.path || '')}
-      />
-    </div>
-  );
+  const filteredNewsletters = useMemo(() => {
+    const allDocs = dateOrderedDocs();
+    return allDocs.newsletters.filter(
+      (doc) => getYear(new Date(doc.date)) === newsletterYear
+    );
+  }, [newsletterYear]);
 
   return (
     <>
@@ -102,19 +145,41 @@ const Insights: React.FC = () => {
           ))}
         </div>
 
-        {[
-          { sectionName: "Relatórios", docs: dateOrderedDocs().monthlyReports, type: "Carta Mensal" },
-          { sectionName: "Newsletter", docs: dateOrderedDocs().newsletters, type: 'Newsletter' }
-        ].map((section) => (
-          <>
-            <SectionTitle title={section.sectionName ?? ''} />
+        <div className="w-full flex flex-col items-center">
+          <SectionTitle title="Relatórios" />
+          <YearTabs
+            selectedYear={reportsYear}
+            onSelectYear={setReportsYear}
+            years={availableYears}
+          />
+          {filteredReports.length > 0 ? (
             <div className='flex justify-around flex-wrap w-11/12 gap-5'>
-              {section.docs.map((doc, index) => (
-                <ReportCard key={index} type={section.type} doc={doc} pdfs={pdfs} />
+              {filteredReports.map((doc, index) => (
+                <ReportCard key={index} type="Carta Mensal" doc={doc} pdfs={pdfs} />
               ))}
             </div>
-          </>
-        ))}
+          ) : (
+            <p className="text-slate-400 italic">Nenhum documento disponível para {reportsYear}</p>
+          )}
+        </div>
+
+        <div className="w-full flex flex-col items-center">
+          <SectionTitle title="Newsletter" />
+          <YearTabs
+            selectedYear={newsletterYear}
+            onSelectYear={setNewsletterYear}
+            years={availableYears}
+          />
+          {filteredNewsletters.length > 0 ? (
+            <div className='flex justify-around flex-wrap w-11/12 gap-5'>
+              {filteredNewsletters.map((doc, index) => (
+                <ReportCard key={index} type="Newsletter" doc={doc} pdfs={pdfs} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-slate-400 italic">Nenhum documento disponível para {newsletterYear}</p>
+          )}
+        </div>
       </div>
     </>
   );
