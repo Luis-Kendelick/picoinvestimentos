@@ -55,6 +55,18 @@ export const docs = {
       file: 'carta-mensal-11-25.pdf',
       date: '2025-11-02',
     },
+    {
+      file: 'carta-mensal-12-25.pdf',
+      date: '2025-12-02',
+    },
+    {
+      file: 'carta-mensal-01-26.pdf',
+      date: '2026-01-02',
+    },
+    {
+      file: 'carta-mensal-02-26.pdf',
+      date: '2026-02-02',
+    },
   ],
   newsletters: [
     {
