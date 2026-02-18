@@ -139,7 +139,8 @@ const Insights: React.FC = () => {
             { title: "Pico Investimentos - Apresentação", embedId: "Cz0uSfptbWk" },
             { title: "Pico Investimentos - Tesouro Direto", embedId: "xQrzWm8z4G4" },
             { title: "Pico Investimentos - Renda Fixa Passiva", embedId: "bavu-OBIyV8" },
-            { title: "Pico Investimentos - Revar", embedId: "uAsUaMtv-70" }
+            { title: "Pico Investimentos - Revar", embedId: "uAsUaMtv-70" },
+            { title: "Renda Variável | Oportunidades e Riscos", embedId: "XJeWwOrgQfU" }
           ].map((video, index) => (
             <VideoCard key={index} {...video} />
           ))}
